@@ -353,18 +353,19 @@
   }
   .contact-info-solo{max-width:480px; margin:0 auto;}
   .contact-item{
-    display:flex; align-items:baseline; justify-content:space-between;
-    gap:16px; flex-wrap:wrap;
-    padding:18px 4px;
+    display:flex; flex-direction:column; gap:6px;
+    padding:22px 4px;
     border-bottom:1px solid var(--border);
+    text-align:left;
   }
   .contact-item .label{
     font-family:'Space Mono', monospace; font-size:0.7rem;
     letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);
   }
   .contact-item a, .contact-item span.value{
-    font-weight:600; text-decoration:none; color:var(--teal-deep);
-    text-align:right;
+    font-family:'Work Sans', sans-serif;
+    font-weight:400; font-size:1.05rem;
+    text-decoration:none; color:var(--teal-deep);
   }
   .contact-item a:hover{color:var(--amber-deep);}
 
