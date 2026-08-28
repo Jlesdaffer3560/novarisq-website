@@ -237,6 +237,29 @@
   .service-card h3{font-size:1.1rem; margin-bottom:10px;}
   .service-card p{color:var(--ink-soft); font-size:0.94rem; margin:0;}
 
+  /* ---------- typical questions ---------- */
+  .questions{padding:64px 0;}
+  .questions .section-head{text-align:center; margin-bottom:36px;}
+  .questions .eyebrow{text-align:center;}
+  .questions-list{
+    list-style:none; margin:0 auto; padding:0;
+    max-width:680px;
+  }
+  .questions-list li{
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:1.1rem;
+    color:var(--teal-deep);
+    padding:16px 0 16px 32px;
+    border-bottom:1px solid var(--border);
+    position:relative;
+  }
+  .questions-list li::before{
+    content:"?";
+    position:absolute; left:0; top:16px;
+    color:var(--amber-deep);
+    font-family:'Archivo', sans-serif; font-weight:800;
+  }
+  .questions-list li:last-child{border-bottom:none;}
+
   /* ---------- who I support ---------- */
   .clients{
     padding:56px 0;
@@ -292,6 +315,19 @@
   .achievement-card h3{font-size:1.02rem; margin-bottom:8px;}
   .achievement-card p{margin:0 0 10px; font-size:0.92rem; color:var(--ink-soft);}
   .achievement-card .inline-link{font-size:0.9rem;}
+
+  /* ---------- app spotlight ---------- */
+  .app-spotlight{
+    padding:72px 0;
+    background:linear-gradient(135deg, var(--teal-deep), var(--teal));
+    text-align:center;
+  }
+  .app-spotlight-inner{max-width:640px; margin:0 auto;}
+  .app-spotlight .eyebrow{
+    color:#f0c090; background:rgba(255,255,255,0.12); border:none;
+  }
+  .app-spotlight h2{color:#fafaf7; font-size:clamp(1.5rem,2.6vw,2rem);}
+  .app-spotlight p{color:rgba(250,250,247,0.85);}
 
   /* ---------- about ---------- */
   .about{
@@ -406,9 +442,10 @@
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#achievements">Selected work</a>
+      <a href="#sustainwise">SustainWise</a>
       <a href="#about">About</a>
     </nav>
-    <a href="#contact" class="btn btn-gold nav-cta">Get in touch</a>
+    <a href="#contact" class="btn btn-gold nav-cta">Book a call</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
@@ -416,8 +453,9 @@
   <nav class="mobile-nav" id="mobileNav">
     <a href="#services">Services</a>
     <a href="#achievements">Selected work</a>
+    <a href="#sustainwise">SustainWise</a>
     <a href="#about">About</a>
-    <a href="#contact" class="btn btn-gold">Get in touch</a>
+    <a href="#contact" class="btn btn-gold">Book a call</a>
   </nav>
 </header>
 
@@ -432,7 +470,7 @@
       <p class="lede">I help companies, investors and financial institutions identify and manage material ESG, sustainability and reputational risks. From double materiality and controversy analysis to ESG methodologies and AI-enabled tools, I translate complex sustainability requirements into practical, decision-ready insight.</p>
       <p class="hero-tags">CSRD · CSDDD · SFDR · Double Materiality · Greenwashing</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-gold">Get in touch</a>
+        <a href="#contact" class="btn btn-gold">Request a scoping call</a>
         <a href="#services" class="btn btn-ghost">How I support you</a>
       </div>
     </div>
@@ -447,24 +485,39 @@
         <article class="service-card">
           <span class="service-icon">1</span>
           <h3>ESG &amp; Sustainability Strategy Advice</h3>
-          <p>Practical strategy advice aligned with evolving frameworks such as CSRD and CSDDD.</p>
+          <p>A practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">2</span>
           <h3>Double Materiality Assessment</h3>
-          <p>Identifying material impacts, risks and opportunities from both impact and financial materiality perspectives.</p>
+          <p>A defensible double materiality assessment covering both impact and financial materiality.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">3</span>
           <h3>ESG Controversies Analysis</h3>
-          <p>Screening and assessing ESG incidents that put reputation, licence to operate or regulatory standing at risk.</p>
+          <p>A concise, evidence-based risk note on ESG incidents affecting reputation or regulatory standing.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">4</span>
           <h3>ESG &amp; Sustainability AI Tools</h3>
-          <p>Designing and developing AI-powered tools that turn ESG and sustainability data into practical screening and decision-support solutions.</p>
+          <p>AI-powered screening and decision-support tools built around your ESG data and workflows.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="questions reveal" id="questions">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Typical questions I help answer</span>
+      </div>
+      <ul class="questions-list">
+        <li>Is this sustainability claim defensible?</li>
+        <li>Which ESG risks could affect this company's reputation?</li>
+        <li>Are our ESG KPIs material and credible?</li>
+        <li>How should we structure a practical CSRD/ESRS readiness approach?</li>
+        <li>Can AI reduce manual ESG screening work without losing professional judgement?</li>
+      </ul>
     </div>
   </section>
 
@@ -502,12 +555,21 @@
         </article>
         <article class="achievement-card">
           <span class="achievement-index">04</span>
-          <span class="achievement-tag">App</span>
+          <span class="achievement-tag">My own product</span>
           <h3>SustainWise</h3>
           <p>An app that teaches ESG regulation — CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk — through short daily quizzes.</p>
           <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="inline-link">Visit sustainwiseapp.com →</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="app-spotlight reveal" id="sustainwise">
+    <div class="container app-spotlight-inner">
+      <span class="eyebrow">My own product</span>
+      <h2>SustainWise — ESG regulation, five minutes a day</h2>
+      <p>SustainWise is an app I designed and built myself — it teaches CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk through short daily quizzes, so teams build real ESG literacy without sitting through another training deck.</p>
+      <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Visit SustainWise →</a>
     </div>
   </section>
 
@@ -520,7 +582,7 @@
         <span class="about-name">About me — Jordi Lesaffer</span>
         <h2>Senior Sustainability Risk Advisor</h2>
         <p>Previously AVP ESG Analytics and Product Manager for Controversy Risk Assessment at Moody's, leading a team of 20 ESG analysts on Moody's ESG Incidents Screening. Before that, over a decade at VIGEO EIRIS (now part of Moody's) as Site Manager and ESG Research Manager, covering sector ratings, controversy analysis and responsible-investment screening.</p>
-        <p>Executive Master in Management (Solvay Brussels School of Economics &amp; Management), CSRD Professional certified, and Board Member at Forum Ethibel.</p>
+        <p>Executive Master in Management (Solvay Brussels School of Economics &amp; Management), CSRD Professional certified, and Board Member at <a href="https://www.forumethibel.org/en" target="_blank" rel="noopener noreferrer" class="inline-link">Forum Ethibel</a>.</p>
       </div>
       <div class="about-flex">
         <h3>Flexible approach</h3>
