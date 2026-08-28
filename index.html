@@ -204,23 +204,33 @@
   .expertise .section-head{max-width:60ch; margin-bottom:36px; text-align:center;}
   .expertise .eyebrow{text-align:center;}
   .expertise-grid{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
   }
-  .expertise-item{
-    display:flex; align-items:flex-start; gap:12px;
+  .expertise-card{
     background:var(--surface);
     border:1px solid var(--border);
-    border-radius:14px;
-    padding:16px 18px;
-    font-weight:600;
-    font-size:0.95rem;
+    border-radius:16px;
+    padding:22px 22px 20px;
+    transition:transform .18s ease, box-shadow .18s ease;
   }
-  .expertise-item::before{
-    content:"";
-    width:8px; height:8px; border-radius:50%;
-    background:var(--amber);
-    margin-top:7px; flex:none;
+  .expertise-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(30,78,65,0.12);
   }
+  .expertise-icon{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:38px; height:38px;
+    border-radius:10px;
+    font-family:'Space Mono', monospace; font-weight:700; font-size:0.82rem;
+    margin-bottom:14px;
+  }
+  .expertise-card:nth-child(odd) .expertise-icon{background:var(--accent-soft); color:var(--teal-deep);}
+  .expertise-card:nth-child(even) .expertise-icon{background:var(--amber-soft); color:var(--amber-deep);}
+  .expertise-card h3{
+    font-family:'Work Sans', sans-serif; font-weight:700;
+    font-size:1.02rem; margin-bottom:8px;
+  }
+  .expertise-card p{margin:0; font-size:0.88rem; color:var(--ink-soft);}
 
   /* ---------- about ---------- */
   .about{
@@ -233,6 +243,14 @@
     display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start;
   }
   .about h2{font-size:clamp(1.5rem,2.6vw,2rem);}
+  .about-photo{
+    width:140px; height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:22px;
+    border:4px solid var(--surface);
+    box-shadow:0 8px 24px rgba(30,78,65,0.18);
+  }
   .about-name{
     font-family:'Space Mono', monospace; font-size:0.78rem;
     letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-deep);
@@ -383,14 +401,46 @@
         <h2>Eight areas, one lens: risk that's both financially material and reputationally real.</h2>
       </div>
       <div class="expertise-grid">
-        <div class="expertise-item">ESG &amp; Sustainability Risk Intelligence</div>
-        <div class="expertise-item">ESG Controversy &amp; Reputational Risk Analysis</div>
-        <div class="expertise-item">Double Materiality Assessments</div>
-        <div class="expertise-item">Emerging &amp; Geopolitical Risk Monitoring</div>
-        <div class="expertise-item">Sustainable Finance &amp; Investor Expectations</div>
-        <div class="expertise-item">ESG Regulations &amp; Compliance (CSRD, CSDDD, SFDR, EU Taxonomy)</div>
-        <div class="expertise-item">ESG Data, Methodologies &amp; Risk Analytics</div>
-        <div class="expertise-item">Stakeholder &amp; Human Rights Risk Analysis</div>
+        <article class="expertise-card">
+          <span class="expertise-icon">01</span>
+          <h3>ESG &amp; Sustainability Risk Intelligence</h3>
+          <p>Turning ESG signals into decision-ready risk insight.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">02</span>
+          <h3>ESG Controversy &amp; Reputational Risk Analysis</h3>
+          <p>Screening incidents that put reputation and licence to operate at stake.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">03</span>
+          <h3>Double Materiality Assessments</h3>
+          <p>Identifying what's financially material and what matters to stakeholders.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">04</span>
+          <h3>Developing ESG AI Tools</h3>
+          <p>Designing AI-powered tools that turn ESG data into practical screening and decision support.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">05</span>
+          <h3>Sustainable Finance &amp; Investor Expectations</h3>
+          <p>Aligning strategy with SRI and responsible-investment criteria.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">06</span>
+          <h3>ESG Regulations &amp; Compliance</h3>
+          <p>Translating evolving frameworks such as CSRD, CSDDD, SFDR and the EU Taxonomy into practical readiness.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">07</span>
+          <h3>ESG Data, Methodologies &amp; Risk Analytics</h3>
+          <p>Building data-quality frameworks that make ESG scores defensible.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">08</span>
+          <h3>Stakeholder &amp; Human Rights Risk Analysis</h3>
+          <p>Assessing business-conduct and human-rights exposure across the value chain.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -398,6 +448,7 @@
   <section class="about reveal" id="about">
     <div class="container about-grid">
       <div>
+        <img src="assets/jordi-lesaffer.jpg" alt="Jordi Lesaffer" class="about-photo">
         <span class="about-name">About me — Jordi Lesaffer</span>
         <h2>Senior Sustainability Risk Advisor</h2>
         <p>As an Independent Consultant, I support investors, financial institutions and corporates in navigating ESG and sustainability-related risks, with 20+ years of experience in ESG research, sustainable finance, controversy risk assessment and human-rights due diligence.</p>
@@ -426,14 +477,6 @@
         <h2>Let's talk about your ESG and sustainability risk needs.</h2>
       </div>
       <div class="contact-info contact-info-solo">
-        <div class="contact-item">
-          <span class="label">Address</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=%22Novarisq%20Consulting%2C%20Bunderdreef%207%2C%201700%20Dilbeek%2C%20Belgium%22" target="_blank" rel="noopener noreferrer">Novarisq Consulting, Bunderdreef 7, 1700 Dilbeek, Belgium</a>
-        </div>
-        <div class="contact-item">
-          <span class="label">Phone</span>
-          <a href="tel:0032494947956">0032-494 94 79 56</a>
-        </div>
         <div class="contact-item">
           <span class="label">Email</span>
           <a href="mailto:jordi.lesaffer@novarisq.com">jordi.lesaffer@novarisq.com</a>
