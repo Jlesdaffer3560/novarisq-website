@@ -232,6 +232,31 @@
   }
   .expertise-card p{margin:0; font-size:0.88rem; color:var(--ink-soft);}
 
+  /* ---------- achievements ---------- */
+  .achievements{padding:80px 0; background:var(--accent-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+  .achievements .section-head{max-width:70ch; margin:0 auto 40px; text-align:center;}
+  .achievements .eyebrow{text-align:center;}
+  .achievements-lede{color:var(--ink-soft); font-size:0.98rem;}
+  .achievement-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+  }
+  .achievement-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px 24px 22px;
+  }
+  .achievement-tag{
+    display:inline-block;
+    font-family:'Space Mono', monospace; font-size:0.68rem;
+    letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--teal-deep); background:var(--accent-soft);
+    padding:4px 11px; border-radius:999px; margin-bottom:12px;
+  }
+  .achievement-card h3{font-size:1.02rem; margin-bottom:8px;}
+  .achievement-card p{margin:0 0 10px; font-size:0.92rem; color:var(--ink-soft);}
+  .achievement-card .inline-link{font-size:0.9rem;}
+
   /* ---------- about ---------- */
   .about{
     padding:80px 0;
@@ -266,14 +291,6 @@
   .about-flex h3{font-size:1rem; margin-bottom:12px; color:var(--teal-deep);}
   .about-flex p{margin-bottom:12px; font-size:0.95rem;}
   .about-flex p:last-child{margin-bottom:0;}
-  .about-tools{
-    margin-top:40px;
-    background:var(--amber-soft);
-    border-radius:16px;
-    padding:24px 26px;
-  }
-  .about-tools h3{font-size:1rem; margin-bottom:10px; color:var(--amber-deep);}
-  .about-tools p{margin:0; font-size:0.95rem; color:var(--ink);}
   .inline-link{color:var(--teal-deep); text-decoration:underline; text-underline-offset:3px; font-weight:600;}
   .inline-link:hover{color:var(--amber-deep);}
 
@@ -316,8 +333,8 @@
   @media (max-width:820px){
     .service-grid{grid-template-columns:1fr;}
     .expertise-grid{grid-template-columns:1fr;}
+    .achievement-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
   }
 </style>
@@ -336,6 +353,7 @@
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#expertise">Expertise</a>
+      <a href="#achievements">Achievements</a>
       <a href="#about">About</a>
     </nav>
     <a href="#contact" class="btn btn-gold nav-cta">Get in touch</a>
@@ -446,6 +464,39 @@
     </div>
   </section>
 
+  <section class="achievements reveal" id="achievements">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Achievements</span>
+        <h2>Recent work in ESG risk intelligence and AI-powered tools.</h2>
+        <p class="achievements-lede">Independent ESG consultant providing advisory, methodological and product-related support on ESG risk intelligence, sustainability reporting readiness, ESG KPIs, controversy monitoring and due diligence — alongside designing and developing AI-powered tools that translate ESG requirements into practical screening, analysis and decision-support solutions.</p>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement-card">
+          <span class="achievement-tag">Product management</span>
+          <h3>Sentometrics — UNGC Risk Incident Database</h3>
+          <p>Product management of Sentometrics' UNGC Risk Incident Database, an ESG controversy and due-diligence screening tool.</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-tag">Development</span>
+          <h3>Durably — Green &amp; Social Claims Scan</h3>
+          <p>Development of Durably's AI-enabled Green &amp; Social Claims Scan, screening greenwashing and social-washing risk in marketing claims.</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-tag">Advisory</span>
+          <h3>PMV — ESG Advisory Support</h3>
+          <p>ESG advisory support to PMV on KPI relevance, ESG tool outputs, client cases and practical implementation.</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-tag">App</span>
+          <h3>SustainWise</h3>
+          <p>An app that teaches ESG regulation — CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk — through short daily quizzes.</p>
+          <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="inline-link">Visit sustainwiseapp.com →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="about reveal" id="about">
     <div class="container about-grid">
       <div>
@@ -461,12 +512,6 @@
         <p>Based in Dilbeek, near Brussels, I offer a flexible approach to meet your specific needs, whether you're looking for support with short-term or small-scale ESG projects and tasks.</p>
         <p>While I primarily work remotely, I am available to work on-site when required to ensure optimal collaboration and results.</p>
         <p>My goal is to provide solutions that align perfectly with your business objectives, delivering value in a way that works best for you.</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="about-tools">
-        <h3>Building ESG AI tools</h3>
-        <p>Alongside advisory work, I design and develop AI-powered tools that translate ESG requirements into practical screening, analysis and decision-support solutions — including product management of Sentometrics' UNGC Risk Incident Database, development of Durably's AI-enabled Green &amp; Social Claims Scan, and <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="inline-link">SustainWise</a>, an app that teaches ESG regulation through short daily quizzes.</p>
       </div>
     </div>
   </section>
