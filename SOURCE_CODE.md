@@ -1,3 +1,15 @@
+# NOVARISQ Consulting website — full source code
+
+Live at: https://novarisq.com
+Repo: https://github.com/Jlesdaffer3560/novarisq-website
+
+Note: `assets/novarisq-logo.png`, `assets/novarisq-icon.png` (favicon) and `assets/jordi-lesaffer.jpg` (profile photo) are binary image files referenced by the HTML below but not included in this text export.
+
+---
+
+## index.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +17,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NOVARISQ Consulting — Strategic ESG, Sustainability and Reputational Risk Intelligence</title>
 <meta name="description" content="Independent ESG, sustainability and reputational risk consultancy based in Brussels. Strategy advice, double materiality assessments and ESG controversy analysis for investors, corporates and financial institutions.">
-<link rel="canonical" href="https://novarisq.com/">
+<link rel="canonical" href="https://www.novarisq.com/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://novarisq.com/">
+<meta property="og:url" content="https://www.novarisq.com/">
 <meta property="og:title" content="NOVARISQ Consulting — Strategic ESG, Sustainability and Reputational Risk Intelligence">
 <meta property="og:description" content="Independent ESG, sustainability and reputational risk consultancy based in Brussels.">
-<meta property="og:image" content="https://novarisq.com/assets/novarisq-logo.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="assets/novarisq-icon.png">
 <style>
@@ -106,8 +117,6 @@
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.is-visible{opacity:1; transform:translateY(0);}
 
-  section[id]{scroll-margin-top:90px;}
-
   /* ---------- nav ---------- */
   header.site-nav{
     position:sticky; top:0; z-index:40;
@@ -134,29 +143,6 @@
   }
   .nav-links a:hover{color:var(--teal-deep);}
   .nav-cta{padding:9px 20px; font-size:0.85rem; white-space:nowrap;}
-  .nav-toggle{
-    display:none;
-    flex-direction:column; justify-content:center; gap:5px;
-    width:36px; height:36px;
-    background:none; border:1px solid var(--border); border-radius:8px;
-    cursor:pointer; padding:8px;
-  }
-  .nav-toggle span{width:100%; height:2px; background:var(--ink); display:block; border-radius:2px;}
-  .mobile-nav{
-    display:none;
-    flex-direction:column;
-    padding:8px 28px 20px;
-    border-top:1px solid var(--border);
-  }
-  .mobile-nav.open{display:flex;}
-  .mobile-nav a{
-    padding:12px 0;
-    text-decoration:none; color:var(--ink); font-weight:600;
-    border-bottom:1px solid var(--border);
-  }
-  .mobile-nav a.btn{
-    border-bottom:none; margin-top:12px; text-align:center;
-  }
 
   /* ---------- hero ---------- */
   .hero{
@@ -191,11 +177,7 @@
   }
   .hero .lede{
     font-size:1.08rem; color:var(--ink-soft);
-    max-width:58ch; margin:0 auto 18px;
-  }
-  .hero-tags{
-    font-family:'Space Mono', monospace; font-size:0.78rem;
-    color:var(--teal-deep); margin:0 auto 32px;
+    max-width:58ch; margin:0 auto 32px;
   }
   .hero-ctas{
     display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
@@ -254,18 +236,34 @@
   .expertise{padding:80px 0;}
   .expertise .section-head{max-width:60ch; margin-bottom:36px; text-align:center;}
   .expertise .eyebrow{text-align:center;}
-  .expertise-tags{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  .expertise-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
   }
-  .expertise-tags span{
-    padding:10px 18px;
-    border-radius:999px;
+  .expertise-card{
     background:var(--surface);
     border:1px solid var(--border);
-    font-weight:600;
-    font-size:0.88rem;
-    color:var(--ink);
+    border-radius:16px;
+    padding:22px 22px 20px;
+    transition:transform .18s ease, box-shadow .18s ease;
   }
+  .expertise-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(30,78,65,0.12);
+  }
+  .expertise-icon{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:38px; height:38px;
+    border-radius:10px;
+    font-family:'Space Mono', monospace; font-weight:700; font-size:0.82rem;
+    margin-bottom:14px;
+  }
+  .expertise-card:nth-child(odd) .expertise-icon{background:var(--accent-soft); color:var(--teal-deep);}
+  .expertise-card:nth-child(even) .expertise-icon{background:var(--amber-soft); color:var(--amber-deep);}
+  .expertise-card h3{
+    font-family:'Work Sans', sans-serif; font-weight:700;
+    font-size:1.02rem; margin-bottom:8px;
+  }
+  .expertise-card p{margin:0; font-size:0.88rem; color:var(--ink-soft);}
 
   /* ---------- achievements ---------- */
   .achievements{padding:80px 0; background:var(--accent-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
@@ -309,8 +307,8 @@
     object-fit:cover;
     object-position:50% 12%;
     margin-bottom:22px;
-    border:5px solid var(--teal);
-    box-shadow:0 8px 24px rgba(47,111,94,0.25);
+    border:5px solid #9cb0e2;
+    box-shadow:0 8px 24px rgba(60,100,198,0.25);
   }
   .about-name{
     font-family:'Space Mono', monospace; font-size:0.78rem;
@@ -367,16 +365,14 @@
 
   @media (max-width:820px){
     .service-grid{grid-template-columns:1fr;}
+    .expertise-grid{grid-template-columns:1fr;}
     .achievement-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
-    .nav-cta{display:none;}
-    .nav-toggle{display:flex;}
   }
 </style>
 </head>
 <body>
-<noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
 
 <header class="site-nav">
   <div class="nav-row">
@@ -386,21 +382,11 @@
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#expertise">Expertise</a>
-      <a href="#achievements">Selected work</a>
+      <a href="#achievements">Achievements</a>
       <a href="#about">About</a>
     </nav>
     <a href="#contact" class="btn btn-gold nav-cta">Get in touch</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span><span></span>
-    </button>
   </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="#services">Services</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#achievements">Selected work</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="btn btn-gold">Get in touch</a>
-  </nav>
 </header>
 
 <main id="top">
@@ -410,8 +396,7 @@
     <div class="container">
       <span class="eyebrow">Independent Consultant · Brussels</span>
       <h1>Strategic ESG, Sustainability and Reputational Risk Intelligence</h1>
-      <p class="lede">I help companies, investors and financial institutions identify and manage material ESG, sustainability and reputational risks. From double materiality and controversy analysis to ESG methodologies and AI-enabled tools, I translate complex sustainability requirements into practical, decision-ready insight.</p>
-      <p class="hero-tags">Double Materiality · ESG Controversies · Sustainability Due Diligence · ESG AI Tools</p>
+      <p class="lede">I help companies identify, assess, and manage ESG, sustainability, and emerging risks, while ensuring compliance with evolving sustainability frameworks such as CSRD, CSDDD, and SFDR. I support organizations in embedding sustainability into their strategy and risk management processes, enabling them to stay ahead of regulatory expectations, strengthen long-term resilience, and safeguard their reputation and stakeholder trust.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-gold">Get in touch</a>
         <a href="#services" class="btn btn-ghost">How I support you</a>
@@ -428,20 +413,20 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">How I support you</span>
-        <h2>I support organisations in developing and strengthening ESG, sustainability, and risk strategies that go beyond compliance.</h2>
+        <h2>I support organizations in developing and strengthening ESG, sustainability, and risk strategies that go beyond compliance.</h2>
       </div>
       <div class="service-grid">
         <article class="service-card">
           <h3>ESG &amp; Sustainability Strategy Advice</h3>
-          <p>Drawing on extensive experience in ESG analysis, controversy screening, emerging risks, and sustainable finance, I provide practical and actionable advice tailored to each organisation's specific context and stakeholder expectations — helping companies align with evolving frameworks such as CSRD and CSDDD while integrating reputational, geopolitical, and sustainability-related risks into strategic decision-making.</p>
+          <p>Drawing on extensive experience in ESG analysis, controversy screening, emerging risks, and sustainable finance, I provide practical and actionable advice tailored to each organization's specific context and stakeholder expectations — helping companies align with evolving frameworks such as CSRD and CSDDD while integrating reputational, geopolitical, and sustainability-related risks into strategic decision-making.</p>
         </article>
         <article class="service-card">
           <h3>Double Materiality Assessment</h3>
-          <p>I help organisations conduct robust and strategic Double Materiality Assessments that identify, assess, and prioritise both sustainability impacts and financially material ESG risks and opportunities — going beyond a purely compliance-driven exercise by integrating stakeholder expectations, reputational considerations, emerging risks, and sector-specific sustainability challenges.</p>
+          <p>I help organizations conduct robust and strategic Double Materiality Assessments that identify, assess, and prioritize both sustainability impacts and financially material ESG risks and opportunities — going beyond a purely compliance-driven exercise by integrating stakeholder expectations, reputational considerations, emerging risks, and sector-specific sustainability challenges.</p>
         </article>
         <article class="service-card">
           <h3>ESG Controversies Analysis</h3>
-          <p>With extensive experience in ESG controversy analysis and sustainability risk intelligence, I help organisations identify, assess, and manage ESG-related incidents that may affect reputation, stakeholder trust, regulatory exposure, and long-term business resilience — across reputational, legal, operational, financial, human capital, and compliance risk dimensions.</p>
+          <p>With extensive experience in ESG controversy analysis and sustainability risk intelligence, I help organizations identify, assess, and manage ESG-related incidents that may affect reputation, stakeholder trust, regulatory exposure, and long-term business resilience — across reputational, legal, operational, financial, human capital, and compliance risk dimensions.</p>
         </article>
       </div>
     </div>
@@ -469,15 +454,47 @@
         <span class="eyebrow">Expertise</span>
         <h2>Eight areas, one lens: risk that's both financially material and reputationally real.</h2>
       </div>
-      <div class="expertise-tags">
-        <span>ESG &amp; Sustainability Risk Intelligence</span>
-        <span>ESG Controversy &amp; Reputational Risk Analysis</span>
-        <span>Double Materiality Assessments</span>
-        <span>Developing ESG AI Tools</span>
-        <span>Sustainable Finance &amp; Investor Expectations</span>
-        <span>ESG Regulations &amp; Compliance (CSRD, CSDDD, SFDR, EU Taxonomy)</span>
-        <span>ESG Data, Methodologies &amp; Risk Analytics</span>
-        <span>Stakeholder &amp; Human Rights Risk Analysis</span>
+      <div class="expertise-grid">
+        <article class="expertise-card">
+          <span class="expertise-icon">01</span>
+          <h3>ESG &amp; Sustainability Risk Intelligence</h3>
+          <p>Turning ESG signals into decision-ready risk insight.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">02</span>
+          <h3>ESG Controversy &amp; Reputational Risk Analysis</h3>
+          <p>Screening incidents that put reputation and licence to operate at stake.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">03</span>
+          <h3>Double Materiality Assessments</h3>
+          <p>Identifying what's financially material and what matters to stakeholders.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">04</span>
+          <h3>Developing ESG AI Tools</h3>
+          <p>Designing AI-powered tools that turn ESG data into practical screening and decision support.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">05</span>
+          <h3>Sustainable Finance &amp; Investor Expectations</h3>
+          <p>Aligning strategy with SRI and responsible-investment criteria.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">06</span>
+          <h3>ESG Regulations &amp; Compliance</h3>
+          <p>Translating evolving frameworks such as CSRD, CSDDD, SFDR and the EU Taxonomy into practical readiness.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">07</span>
+          <h3>ESG Data, Methodologies &amp; Risk Analytics</h3>
+          <p>Building data-quality frameworks that make ESG scores defensible.</p>
+        </article>
+        <article class="expertise-card">
+          <span class="expertise-icon">08</span>
+          <h3>Stakeholder &amp; Human Rights Risk Analysis</h3>
+          <p>Assessing business-conduct and human-rights exposure across the value chain.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -485,7 +502,7 @@
   <section class="achievements reveal" id="achievements">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Selected work</span>
+        <span class="eyebrow">Achievements</span>
         <h2>Recent work in ESG risk intelligence and AI-powered tools.</h2>
         <p class="achievements-lede">Independent ESG consultant providing advisory, methodological and product-related support on ESG risk intelligence, sustainability reporting readiness, ESG KPIs, controversy monitoring and due diligence — alongside designing and developing AI-powered tools that translate ESG requirements into practical screening, analysis and decision-support solutions.</p>
       </div>
@@ -497,8 +514,8 @@
         </article>
         <article class="achievement-card">
           <span class="achievement-tag">Development</span>
-          <h3>Durably — Sustainability Scan</h3>
-          <p>Development of Durably's AI-enabled Sustainability Scan, screening greenwashing and social-washing risk in marketing claims.</p>
+          <h3>Durably — Green &amp; Social Claims Scan</h3>
+          <p>Development of Durably's AI-enabled Green &amp; Social Claims Scan, screening greenwashing and social-washing risk in marketing claims.</p>
         </article>
         <article class="achievement-card">
           <span class="achievement-tag">Advisory</span>
@@ -527,7 +544,7 @@
       </div>
       <div class="about-flex">
         <h3>Flexible approach</h3>
-        <p>Based in Dilbeek, near Brussels, I provide flexible support for short-term assignments, targeted ESG analyses and larger advisory projects.</p>
+        <p>Based in Dilbeek, near Brussels, I offer a flexible approach to meet your specific needs, whether you're looking for support with short-term or small-scale ESG projects and tasks.</p>
         <p>While I primarily work remotely, I am available to work on-site when required to ensure optimal collaboration and results.</p>
         <p>My goal is to provide solutions that align perfectly with your business objectives, delivering value in a way that works best for you.</p>
       </div>
@@ -541,10 +558,6 @@
         <h2>Let's talk about your ESG and sustainability risk needs.</h2>
       </div>
       <div class="contact-info contact-info-solo">
-        <div class="contact-item">
-          <span class="label">Registered address</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=%22Novarisq%20Consulting%2C%20Bunderdreef%207%2C%201700%20Dilbeek%2C%20Belgium%22" target="_blank" rel="noopener noreferrer">Novarisq Consulting, Bunderdreef 7, 1700 Dilbeek, Belgium</a>
-        </div>
         <div class="contact-item">
           <span class="label">Email</span>
           <a href="mailto:jordi.lesaffer@novarisq.com">jordi.lesaffer@novarisq.com</a>
@@ -570,19 +583,6 @@
 </footer>
 
 <script>
-  const navToggle = document.getElementById('navToggle');
-  const mobileNav = document.getElementById('mobileNav');
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
-  }
-
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
   if (prefersReduced || !('IntersectionObserver' in window)) {
@@ -602,3 +602,4 @@
 
 </body>
 </html>
+```
