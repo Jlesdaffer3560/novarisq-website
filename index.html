@@ -125,7 +125,7 @@
     display:flex; align-items:center;
     text-decoration:none;
   }
-  .logo-image{height:38px; width:auto; display:block;}
+  .logo-image{height:48px; width:auto; display:block;}
   .nav-links{
     display:flex; gap:24px; margin:0 auto;
   }
@@ -173,6 +173,12 @@
       radial-gradient(circle at 88% 12%, rgba(185,106,46,0.14), transparent 38%),
       radial-gradient(circle at 50% 100%, rgba(30,78,65,0.08), transparent 50%);
   }
+  .hero-mark{
+    position:absolute; z-index:0; pointer-events:none;
+    top:-10%; right:-6%;
+    width:min(560px, 55vw); height:auto;
+    opacity:0.07;
+  }
   .hero .container{position:relative; z-index:1;}
   .hero .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -206,7 +212,7 @@
   .services .section-head{max-width:60ch; margin:0 auto 44px; text-align:center;}
   .services .eyebrow{text-align:center;}
   .service-grid{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
   }
   .service-card{
     background:var(--surface);
@@ -227,18 +233,20 @@
     text-align:center;
   }
   .clients h2{font-size:clamp(1.4rem,2.4vw,1.8rem); margin-bottom:24px;}
-  .client-chips{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  .who-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
   }
-  .client-chips span{
-    padding:8px 16px;
-    border-radius:999px;
+  .who-card{
     background:var(--surface);
     border:1px solid var(--border);
-    font-weight:600;
-    font-size:0.88rem;
-    color:var(--teal-deep);
+    border-radius:14px;
+    padding:18px 16px;
+    font-weight:700;
+    font-size:0.92rem;
+    color:var(--ink);
   }
+  .who-card:nth-child(odd){border-top:3px solid var(--teal);}
+  .who-card:nth-child(even){border-top:3px solid var(--amber);}
 
   /* ---------- expertise ---------- */
   .expertise{padding:80px 0;}
@@ -265,11 +273,21 @@
     display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
   }
   .achievement-card{
+    position:relative;
+    overflow:hidden;
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:16px;
     padding:24px 24px 22px;
   }
+  .achievement-index{
+    position:absolute; top:6px; right:16px;
+    font-family:'Archivo', sans-serif; font-weight:800;
+    font-size:3.4rem; line-height:1;
+    color:var(--accent-soft);
+    z-index:0;
+  }
+  .achievement-card > *:not(.achievement-index){position:relative; z-index:1;}
   .achievement-tag{
     display:inline-block;
     font-family:'Space Mono', monospace; font-size:0.68rem;
@@ -292,12 +310,25 @@
     display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start;
   }
   .about h2{font-size:clamp(1.5rem,2.6vw,2rem);}
+  .about-photo-wrap{
+    position:relative;
+    width:260px;
+    margin-bottom:22px;
+  }
+  .about-photo-wrap::before{
+    content:"";
+    position:absolute; inset:-18px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(47,111,94,0.18), transparent 72%);
+    z-index:0;
+  }
   .about-photo{
-    width:220px; height:220px;
+    position:relative; z-index:1;
+    width:260px; height:260px;
     border-radius:50%;
     object-fit:cover;
     object-position:50% 12%;
-    margin-bottom:22px;
+    display:block;
     border:5px solid var(--teal);
     box-shadow:0 8px 24px rgba(47,111,94,0.25);
   }
@@ -356,11 +387,18 @@
 
   @media (max-width:820px){
     .service-grid{grid-template-columns:1fr;}
+    .who-grid{grid-template-columns:repeat(2,1fr);}
     .achievement-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
     .nav-cta{display:none;}
     .nav-toggle{display:flex;}
+  }
+
+  @media (max-width:480px){
+    .about-photo-wrap{width:180px;}
+    .about-photo{width:180px; height:180px;}
+    .hero h1{font-size:1.8rem;}
   }
 </style>
 </head>
@@ -396,6 +434,7 @@
 
   <section class="hero">
     <div class="hero-bg-accent" aria-hidden="true"></div>
+    <img src="assets/novarisq-icon.png" alt="" class="hero-mark" aria-hidden="true">
     <div class="container">
       <span class="eyebrow">Independent Consultant · Brussels</span>
       <h1>Strategic ESG, Sustainability and Reputational Risk Intelligence</h1>
@@ -426,6 +465,10 @@
           <h3>ESG Controversies Analysis</h3>
           <p>Screening and assessing ESG incidents that put reputation, licence to operate or regulatory standing at risk.</p>
         </article>
+        <article class="service-card">
+          <h3>ESG &amp; Sustainability AI Tools</h3>
+          <p>Designing and developing AI-powered tools that turn ESG and sustainability data into practical screening and decision-support solutions.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -433,15 +476,15 @@
   <section class="clients reveal">
     <div class="container">
       <h2>Who I support</h2>
-      <div class="client-chips">
-        <span>Investors</span>
-        <span>Financial institutions</span>
-        <span>Corporates</span>
-        <span>ESG data providers</span>
-        <span>Sustainability teams</span>
-        <span>Risk departments</span>
-        <span>Boards</span>
-        <span>NGOs</span>
+      <div class="who-grid">
+        <div class="who-card">Investors</div>
+        <div class="who-card">Financial institutions</div>
+        <div class="who-card">Corporates</div>
+        <div class="who-card">ESG data providers</div>
+        <div class="who-card">Sustainability teams</div>
+        <div class="who-card">Risk departments</div>
+        <div class="who-card">Boards</div>
+        <div class="who-card">NGOs</div>
       </div>
     </div>
   </section>
@@ -450,10 +493,8 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Expertise</span>
-        <h2>Also covering:</h2>
       </div>
       <div class="expertise-tags">
-        <span>Developing ESG AI Tools</span>
         <span>Sustainable Finance &amp; Investor Expectations</span>
         <span>ESG Regulations &amp; Compliance (CSRD, CSDDD, SFDR, EU Taxonomy)</span>
         <span>ESG Data, Methodologies &amp; Risk Analytics</span>
@@ -470,21 +511,25 @@
       </div>
       <div class="achievement-grid">
         <article class="achievement-card">
+          <span class="achievement-index">01</span>
           <span class="achievement-tag">Product management</span>
           <h3>Sentometrics — UNGC Risk Incident Database</h3>
           <p>Product management of Sentometrics' UNGC Risk Incident Database, an ESG controversy and due-diligence screening tool.</p>
         </article>
         <article class="achievement-card">
+          <span class="achievement-index">02</span>
           <span class="achievement-tag">Development</span>
           <h3>Durably — Sustainability Scan</h3>
           <p>Development of Durably's AI-enabled Sustainability Scan, screening greenwashing and social-washing risk in marketing claims.</p>
         </article>
         <article class="achievement-card">
+          <span class="achievement-index">03</span>
           <span class="achievement-tag">Advisory</span>
           <h3>PMV — ESG Advisory Support</h3>
           <p>ESG advisory support to PMV on KPI relevance, ESG tool outputs, client cases and practical implementation.</p>
         </article>
         <article class="achievement-card">
+          <span class="achievement-index">04</span>
           <span class="achievement-tag">App</span>
           <h3>SustainWise</h3>
           <p>An app that teaches ESG regulation — CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk — through short daily quizzes.</p>
@@ -497,7 +542,9 @@
   <section class="about reveal" id="about">
     <div class="container about-grid">
       <div>
-        <img src="assets/jordi-lesaffer.jpg" alt="Jordi Lesaffer" class="about-photo">
+        <div class="about-photo-wrap">
+          <img src="assets/jordi-lesaffer.jpg" alt="Jordi Lesaffer" class="about-photo">
+        </div>
         <span class="about-name">About me — Jordi Lesaffer</span>
         <h2>Senior Sustainability Risk Advisor</h2>
         <p>Previously AVP ESG Analytics and Product Manager for Controversy Risk Assessment at Moody's, leading a team of 20 ESG analysts on Moody's ESG Incidents Screening. Before that, over a decade at VIGEO EIRIS (now part of Moody's) as Site Manager and ESG Research Manager, covering sector ratings, controversy analysis and responsible-investment screening.</p>
