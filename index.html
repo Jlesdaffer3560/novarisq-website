@@ -17,17 +17,17 @@
   @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
   :root{
-    --bg:#f1f0ea;
+    --bg:#f7f3e8;
     --surface:#ffffff;
-    --accent-soft:#dceae1;
-    --border:#dedad0;
-    --ink:#1d2220;
-    --ink-soft:#6b7169;
-    --teal:#2f6f5e;
-    --teal-deep:#1e4e41;
-    --amber:#b96a2e;
-    --amber-deep:#9c5423;
-    --amber-soft:#f1ddb8;
+    --accent-soft:#aeeac4;
+    --border:#e5e2d6;
+    --ink:#1b211d;
+    --ink-soft:#667069;
+    --teal:#008631;
+    --teal-deep:#007029;
+    --amber:#a56700;
+    --amber-deep:#704600;
+    --amber-soft:#ead3ae;
     --danger:#b23a2e;
     --danger-soft:#f7e4e1;
   }
@@ -99,7 +99,7 @@
     transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
   }
   .btn-gold{background:var(--amber-deep); color:#fff;}
-  .btn-gold:hover{background:#7f4520; transform:translateY(-2px); box-shadow:0 10px 26px rgba(156,84,35,0.32);}
+  .btn-gold:hover{background:#573600; transform:translateY(-2px); box-shadow:0 10px 26px rgba(112,70,0,0.32);}
   .btn-ghost{background:transparent; border-color:var(--border); color:var(--ink);}
   .btn-ghost:hover{border-color:var(--teal); color:var(--teal-deep);}
 
@@ -113,7 +113,7 @@
   header.site-nav{
     position:sticky; top:0; z-index:40;
     backdrop-filter:blur(10px);
-    background:rgba(241,240,234,0.88);
+    background:rgba(247,243,232,0.88);
     border-bottom:1px solid var(--border);
   }
   .nav-row{
@@ -170,9 +170,9 @@
   .hero-bg-accent{
     position:absolute; inset:0; z-index:0; pointer-events:none;
     background:
-      radial-gradient(circle at 15% 20%, rgba(47,111,94,0.16), transparent 42%),
+      radial-gradient(circle at 15% 20%, rgba(0,134,49,0.16), transparent 42%),
       radial-gradient(circle at 88% 12%, rgba(185,106,46,0.14), transparent 38%),
-      radial-gradient(circle at 50% 100%, rgba(30,78,65,0.08), transparent 50%);
+      radial-gradient(circle at 50% 100%, rgba(0,112,41,0.08), transparent 50%);
   }
   .hero-mark{
     position:absolute; z-index:0; pointer-events:none;
@@ -218,12 +218,12 @@
     background:var(--surface);
     border-radius:18px;
     padding:28px 24px;
-    box-shadow:0 2px 14px rgba(30,78,65,0.06);
+    box-shadow:0 2px 14px rgba(0,112,41,0.06);
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .service-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 16px 32px rgba(30,78,65,0.14);
+    box-shadow:0 16px 32px rgba(0,112,41,0.14);
   }
   .service-icon{
     display:inline-flex; align-items:center; justify-content:center;
@@ -258,7 +258,7 @@
     background:var(--surface);
     border-radius:14px;
     padding:20px 22px;
-    box-shadow:0 2px 14px rgba(30,78,65,0.07);
+    box-shadow:0 2px 14px rgba(0,112,41,0.07);
   }
   .questions-list li:last-child:nth-child(odd){grid-column:1 / -1; max-width:52ch; margin:0 auto;}
   .questions-list li::before{
@@ -304,12 +304,12 @@
     background:var(--bg);
     border-radius:16px;
     padding:24px 24px 22px;
-    box-shadow:0 2px 14px rgba(30,78,65,0.06);
+    box-shadow:0 2px 14px rgba(0,112,41,0.06);
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .achievement-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 16px 32px rgba(30,78,65,0.14);
+    box-shadow:0 16px 32px rgba(0,112,41,0.14);
   }
   .achievement-index{
     position:absolute; top:6px; right:16px;
@@ -363,7 +363,7 @@
     content:"";
     position:absolute; inset:-18px;
     border-radius:50%;
-    background:radial-gradient(circle, rgba(47,111,94,0.18), transparent 72%);
+    background:radial-gradient(circle, rgba(0,134,49,0.18), transparent 72%);
     z-index:0;
   }
   .about-photo{
@@ -374,7 +374,7 @@
     object-position:50% 12%;
     display:block;
     border:5px solid var(--teal);
-    box-shadow:0 8px 24px rgba(47,111,94,0.25);
+    box-shadow:0 8px 24px rgba(0,134,49,0.25);
   }
   .about-name{
     font-family:'Space Mono', monospace; font-size:0.78rem;
