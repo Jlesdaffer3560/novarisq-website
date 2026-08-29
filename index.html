@@ -112,9 +112,21 @@
   section[id]{scroll-margin-top:90px;}
 
   /* ---------- nav ---------- */
+  .utility-strip{
+    background:var(--deep);
+    color:rgba(255,255,255,0.7);
+    padding:7px 28px;
+    font-family:'Space Mono', monospace; font-size:0.68rem; letter-spacing:0.04em;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:6px;
+  }
+  .utility-strip a{color:inherit; text-decoration:none;}
+  .utility-strip a:hover{color:#f0c090;}
   header.site-nav{
     position:sticky; top:0; z-index:40;
-    background:var(--deep);
+    backdrop-filter:blur(10px);
+    background:rgba(247,245,239,0.92);
+    border-bottom:1px solid var(--border);
   }
   .nav-row{
     display:flex; align-items:center; justify-content:space-between;
@@ -131,30 +143,34 @@
     display:flex; gap:24px; margin:0 auto;
   }
   .nav-links a{
-    text-decoration:none; color:rgba(255,255,255,0.75); font-weight:600; font-size:0.92rem;
+    text-decoration:none; color:var(--ink-soft); font-weight:600; font-size:0.92rem;
   }
-  .nav-links a:hover{color:#f0c090;}
+  .nav-links a:hover{color:var(--teal-deep);}
   .nav-toggle{
     display:none;
     flex-direction:column; justify-content:center; gap:5px;
     width:36px; height:36px;
-    background:none; border:1px solid rgba(255,255,255,0.25); border-radius:8px;
+    background:none; border:1px solid var(--border); border-radius:8px;
     cursor:pointer; padding:8px;
   }
-  .nav-toggle span{width:100%; height:2px; background:#fff; display:block; border-radius:2px;}
+  .nav-toggle span{width:100%; height:2px; background:var(--ink); display:block; border-radius:2px;}
   .mobile-nav{
     display:none;
     flex-direction:column;
     padding:8px 28px 20px;
-    border-top:1px solid rgba(255,255,255,0.16);
+    border-top:1px solid var(--border);
   }
   .mobile-nav.open{display:flex;}
   .mobile-nav a{
     padding:12px 0;
-    text-decoration:none; color:#fff; font-weight:600;
-    border-bottom:1px solid rgba(255,255,255,0.16);
+    text-decoration:none; color:var(--ink); font-weight:600;
+    border-bottom:1px solid var(--border);
   }
   .mobile-nav a:last-child{border-bottom:none;}
+
+  @media (max-width:600px){
+    .utility-strip{display:none;}
+  }
 
   /* ---------- hero ---------- */
   .hero{
@@ -438,6 +454,10 @@
 <body>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
 
+<div class="utility-strip">
+  <span>Brussels · Independent ESG Consultant</span>
+  <a href="mailto:jordi.lesaffer@novarisq.com">jordi.lesaffer@novarisq.com</a>
+</div>
 <header class="site-nav">
   <div class="nav-row">
     <a href="#top" class="logo">
