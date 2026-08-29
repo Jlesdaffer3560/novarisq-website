@@ -69,7 +69,7 @@
   h1,h2,h3{
     font-family:'IBM Plex Sans', system-ui, sans-serif;
     font-weight:600;
-    margin:0 0 14px;
+    margin:0 0 10px;
     letter-spacing:-0.02em;
     line-height:1.15;
     color:var(--ink);
@@ -162,7 +162,7 @@
   .hero{
     position:relative;
     overflow:hidden;
-    padding:64px 0 56px;
+    padding:48px 0 44px;
     background:var(--surface);
     text-align:center;
   }
@@ -189,7 +189,7 @@
   }
   .hero .lede{
     font-size:1.08rem; color:var(--ink-soft);
-    max-width:58ch; margin:0 auto 26px;
+    max-width:58ch; margin:0 auto 20px;
   }
   .hero-ctas{
     display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
@@ -206,17 +206,17 @@
   .soft-card p:last-child{margin-bottom:0;}
 
   /* ---------- services ---------- */
-  .services{padding:56px 0; background:var(--section-tint);}
-  .services .section-head{max-width:60ch; margin:0 auto 32px; text-align:center;}
+  .services{padding:44px 0; background:var(--section-tint);}
+  .services .section-head{max-width:60ch; margin:0 auto 24px; text-align:center;}
   .services .eyebrow{text-align:center;}
   .service-grid{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
   }
   .service-card{
     background:var(--surface);
     border:1px solid var(--border);
-    border-radius:18px;
-    padding:28px 24px;
+    border-radius:16px;
+    padding:20px 20px;
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .service-card:hover{
@@ -246,70 +246,39 @@
     letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-deep);
     margin-bottom:4px;
   }
-
-  /* ---------- typical questions ---------- */
-  .questions{
-    padding:52px 0;
-    background:var(--surface);
-  }
-  .questions .section-head{text-align:center; margin-bottom:28px;}
-  .questions .eyebrow{text-align:center;}
-  .questions-list{
-    list-style:none; margin:0 auto; padding:0;
-    max-width:640px;
-    counter-reset:q;
-    display:flex; flex-direction:column; gap:10px;
-  }
-  .questions-list li{
-    counter-increment:q;
-    display:flex; gap:14px; align-items:flex-start;
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:16px 20px;
-  }
-  .questions-list li::before{
-    content:counter(q, decimal-leading-zero);
-    flex:none;
-    display:flex; align-items:center; justify-content:center;
-    width:30px; height:30px; border-radius:50%;
-    font-family:'Space Mono', monospace; font-weight:700; font-size:0.8rem;
-  }
-  .questions-list li:nth-child(odd)::before{background:var(--accent-soft); color:var(--teal-deep);}
-  .questions-list li:nth-child(even)::before{background:var(--amber-soft); color:var(--amber-deep);}
-  .questions-list li span{
-    font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:1rem;
-    color:var(--ink); line-height:1.4;
+  .service-question{
+    font-style:italic; color:var(--ink-soft); font-size:0.9rem;
+    margin:0 0 10px;
   }
 
   /* ---------- who I support ---------- */
   .clients{
-    padding:56px 0;
+    padding:44px 0;
     background:var(--section-tint);
     text-align:center;
   }
   .clients .eyebrow{text-align:center;}
   .clients .section-head{margin-bottom:8px;}
   .audience-groups{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
-    margin-top:20px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+    margin-top:16px;
     text-align:left;
   }
   .audience-group{
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:14px;
-    padding:22px 24px;
+    padding:18px 20px;
   }
-  .audience-group h3{font-size:1.05rem; font-weight:500; margin-bottom:8px; color:var(--ink);}
+  .audience-group h3{font-size:1.05rem; font-weight:500; margin-bottom:6px; color:var(--ink);}
   .audience-group p{font-size:0.92rem; color:var(--ink-soft); margin:0;}
 
   /* ---------- achievements ---------- */
-  .achievements{padding:56px 0; background:var(--surface);}
-  .achievements .section-head{max-width:70ch; margin:0 auto 30px; text-align:center;}
+  .achievements{padding:44px 0; background:var(--surface);}
+  .achievements .section-head{max-width:70ch; margin:0 auto 22px; text-align:center;}
   .achievements .eyebrow{text-align:center;}
   .achievement-grid{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:16px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
   }
   .achievement-card{
     position:relative;
@@ -317,7 +286,7 @@
     background:var(--bg);
     border:1px solid var(--border);
     border-radius:16px;
-    padding:24px 24px 22px;
+    padding:20px 20px 18px;
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .achievement-card:hover{
@@ -346,7 +315,7 @@
 
   /* ---------- app spotlight ---------- */
   .app-spotlight{
-    padding:52px 0;
+    padding:44px 0;
     background:linear-gradient(135deg, var(--teal-deep), var(--teal));
     text-align:center;
   }
@@ -364,19 +333,19 @@
 
   /* ---------- about ---------- */
   .about{
-    padding:56px 0;
+    padding:44px 0;
     background:var(--surface);
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
   }
   .about-grid{
-    display:grid; grid-template-columns:0.9fr 1.1fr; gap:36px; align-items:start;
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:28px; align-items:start;
   }
   .about h2{font-size:clamp(1.5rem,2.6vw,2rem);}
   .about-photo-wrap{
     position:relative;
-    width:260px;
-    margin-bottom:22px;
+    width:220px;
+    margin-bottom:18px;
   }
   .about-photo-wrap::before{
     content:"";
@@ -387,7 +356,7 @@
   }
   .about-photo{
     position:relative; z-index:1;
-    width:260px; height:260px;
+    width:220px; height:220px;
     border-radius:50%;
     object-fit:cover;
     object-position:50% 12%;
@@ -406,11 +375,11 @@
 
   /* ---------- contact ---------- */
   .contact{
-    padding:64px 0;
+    padding:48px 0;
     background:var(--deep);
     color:rgba(255,255,255,0.75);
   }
-  .contact .section-head{text-align:center; max-width:56ch; margin:0 auto 32px;}
+  .contact .section-head{text-align:center; max-width:56ch; margin:0 auto 24px;}
   .contact .eyebrow{
     text-align:center;
     color:#f0c090; background:rgba(255,255,255,0.1); border:none;
@@ -422,8 +391,8 @@
   }
   .contact-info-solo{max-width:480px; margin:0 auto;}
   .contact-item{
-    display:flex; flex-direction:column; gap:6px;
-    padding:22px 4px;
+    display:flex; flex-direction:column; gap:4px;
+    padding:16px 4px;
     border-bottom:1px solid rgba(255,255,255,0.16);
     text-align:left;
   }
@@ -501,7 +470,7 @@
       <h1>Strategic ESG, Sustainability and Reputational Risk Intelligence</h1>
       <p class="lede">I help companies, investors and financial institutions identify and manage material ESG, sustainability and reputational risks. From double materiality and controversy analysis to ESG methodologies and AI-enabled tools, I translate complex sustainability requirements into practical, decision-ready insight.</p>
       <div class="hero-ctas">
-        <a href="#services" class="btn btn-gold">How I support you</a>
+        <a href="#services" class="btn btn-gold">How I can support you</a>
       </div>
     </div>
   </section>
@@ -510,50 +479,38 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Services</span>
-        <h2>How I support you</h2>
+        <h2>How I can support you</h2>
       </div>
       <div class="service-grid">
         <article class="service-card">
           <span class="service-icon">1</span>
+          <p class="service-question">"How should we structure a practical CSRD/ESRS readiness approach?"</p>
           <h3>ESG &amp; Sustainability Strategy Advice</h3>
           <p>A practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps.</p>
           <p class="service-output"><span class="label">Output</span> ESG risk memo, management briefing or KPI review.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">2</span>
+          <p class="service-question">"Are our ESG KPIs material and credible?"</p>
           <h3>Double Materiality Assessment</h3>
           <p>A defensible double materiality assessment covering both impact and financial materiality.</p>
           <p class="service-output"><span class="label">Output</span> IRO review with scoring logic, evidence base and management conclusions.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">3</span>
+          <p class="service-question">"Which ESG risks could affect this company's reputation?"</p>
           <h3>ESG Controversies Analysis</h3>
           <p>A concise, evidence-based risk note on ESG incidents affecting reputation or regulatory standing.</p>
           <p class="service-output"><span class="label">Output</span> Company or sector controversy briefing with severity rating and next steps.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">4</span>
+          <p class="service-question">"Can AI reduce manual ESG screening work without losing professional judgement?"</p>
           <h3>ESG &amp; Sustainability AI Tools</h3>
           <p>AI-powered screening and decision-support tools built around your ESG data and workflows.</p>
           <p class="service-output"><span class="label">Output</span> Prototype, methodology logic or red-flag screening workflow.</p>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="questions reveal" id="questions">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">FAQ</span>
-        <h2>Typical questions I help answer</h2>
-      </div>
-      <ul class="questions-list">
-        <li><span>Is this sustainability claim defensible?</span></li>
-        <li><span>Which ESG risks could affect this company's reputation?</span></li>
-        <li><span>Are our ESG KPIs material and credible?</span></li>
-        <li><span>How should we structure a practical CSRD/ESRS readiness approach?</span></li>
-        <li><span>Can AI reduce manual ESG screening work without losing professional judgement?</span></li>
-      </ul>
     </div>
   </section>
 
