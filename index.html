@@ -130,9 +130,16 @@
   }
   .nav-row{
     display:flex; align-items:center; justify-content:space-between;
-    padding:14px 28px;
+    padding:14px 28px 4px;
     max-width:1080px; margin:0 auto;
     gap:20px;
+  }
+  .nav-subrow{
+    max-width:1080px; margin:0 auto;
+    padding:0 28px 10px;
+    font-family:'Space Mono', monospace; font-size:0.7rem;
+    letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--teal-deep);
   }
   .logo{
     display:flex; align-items:center;
@@ -461,7 +468,7 @@
 <header class="site-nav">
   <div class="nav-row">
     <a href="#top" class="logo">
-      <img src="assets/novarisq-logo.png" alt="NOVARISQ Consulting — Sustainability Risk Intelligence" class="logo-image">
+      <img src="assets/novarisq-logo-compact.png" alt="NOVARISQ Consulting" class="logo-image">
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
@@ -473,6 +480,7 @@
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="nav-subrow">Sustainability Risk Intelligence</div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="#services">Services</a>
     <a href="#achievements">Selected work</a>
