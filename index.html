@@ -17,7 +17,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
   :root{
-    --bg:#f7f3e8;
+    --bg:#f5f4ef;
     --surface:#ffffff;
     --accent-soft:#aeeac4;
     --border:#e5e2d6;
@@ -67,9 +67,9 @@
   h1,h2,h3{
     font-family:'Archivo', 'Work Sans', sans-serif;
     font-weight:700;
-    margin:0 0 18px;
+    margin:0 0 14px;
     letter-spacing:-0.01em;
-    color:var(--teal-deep);
+    color:var(--ink);
   }
 
   .eyebrow{
@@ -100,8 +100,6 @@
   }
   .btn-gold{background:var(--amber-deep); color:#fff;}
   .btn-gold:hover{background:#573600; transform:translateY(-2px); box-shadow:0 10px 26px rgba(112,70,0,0.32);}
-  .btn-ghost{background:transparent; border-color:var(--border); color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--teal); color:var(--teal-deep);}
 
   /* ---------- reveal on scroll ---------- */
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
@@ -113,7 +111,7 @@
   header.site-nav{
     position:sticky; top:0; z-index:40;
     backdrop-filter:blur(10px);
-    background:rgba(247,243,232,0.88);
+    background:rgba(245,244,239,0.88);
     border-bottom:1px solid var(--border);
   }
   .nav-row{
@@ -134,7 +132,6 @@
     text-decoration:none; color:var(--ink-soft); font-weight:600; font-size:0.92rem;
   }
   .nav-links a:hover{color:var(--teal-deep);}
-  .nav-cta{padding:9px 20px; font-size:0.85rem; white-space:nowrap;}
   .nav-toggle{
     display:none;
     flex-direction:column; justify-content:center; gap:5px;
@@ -155,15 +152,13 @@
     text-decoration:none; color:var(--ink); font-weight:600;
     border-bottom:1px solid var(--border);
   }
-  .mobile-nav a.btn{
-    border-bottom:none; margin-top:12px; text-align:center;
-  }
+  .mobile-nav a:last-child{border-bottom:none;}
 
   /* ---------- hero ---------- */
   .hero{
     position:relative;
     overflow:hidden;
-    padding:96px 0 88px;
+    padding:64px 0 56px;
     background:var(--bg);
     text-align:center;
   }
@@ -190,7 +185,7 @@
   }
   .hero .lede{
     font-size:1.08rem; color:var(--ink-soft);
-    max-width:58ch; margin:0 auto 32px;
+    max-width:58ch; margin:0 auto 26px;
   }
   .hero-ctas{
     display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
@@ -207,8 +202,8 @@
   .soft-card p:last-child{margin-bottom:0;}
 
   /* ---------- services ---------- */
-  .services{padding:80px 0;}
-  .services .section-head{max-width:60ch; margin:0 auto 44px; text-align:center;}
+  .services{padding:56px 0;}
+  .services .section-head{max-width:60ch; margin:0 auto 32px; text-align:center;}
   .services .eyebrow{text-align:center;}
   .service-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
@@ -238,12 +233,12 @@
 
   /* ---------- typical questions ---------- */
   .questions{
-    padding:72px 0;
+    padding:52px 0;
     background:var(--bg);
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
   }
-  .questions .section-head{text-align:center; margin-bottom:36px;}
+  .questions .section-head{text-align:center; margin-bottom:28px;}
   .questions .eyebrow{text-align:center;}
   .questions-list{
     list-style:none; margin:0 auto; padding:0;
@@ -276,7 +271,7 @@
 
   /* ---------- who I support ---------- */
   .clients{
-    padding:64px 0;
+    padding:48px 0;
     background:var(--bg);
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
@@ -293,8 +288,8 @@
   .audience-group p{font-size:0.88rem; color:var(--ink-soft); margin:0;}
 
   /* ---------- achievements ---------- */
-  .achievements{padding:80px 0; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
-  .achievements .section-head{max-width:70ch; margin:0 auto 40px; text-align:center;}
+  .achievements{padding:56px 0; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+  .achievements .section-head{max-width:70ch; margin:0 auto 30px; text-align:center;}
   .achievements .eyebrow{text-align:center;}
   .achievement-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
@@ -333,11 +328,16 @@
 
   /* ---------- app spotlight ---------- */
   .app-spotlight{
-    padding:72px 0;
+    padding:52px 0;
     background:linear-gradient(135deg, var(--teal-deep), var(--teal));
     text-align:center;
   }
   .app-spotlight-inner{max-width:640px; margin:0 auto;}
+  .app-spotlight-icon{
+    width:64px; height:64px; border-radius:16px;
+    margin:0 auto 18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.22);
+  }
   .app-spotlight .eyebrow{
     color:#f0c090; background:rgba(255,255,255,0.12); border:none;
   }
@@ -346,13 +346,13 @@
 
   /* ---------- about ---------- */
   .about{
-    padding:80px 0;
+    padding:56px 0;
     background:var(--surface);
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
   }
   .about-grid{
-    display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start;
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:36px; align-items:start;
   }
   .about h2{font-size:clamp(1.5rem,2.6vw,2rem);}
   .about-photo-wrap{
@@ -387,8 +387,8 @@
   .inline-link:hover{color:var(--amber-deep);}
 
   /* ---------- contact ---------- */
-  .contact{padding:80px 0;}
-  .contact .section-head{text-align:center; max-width:56ch; margin:0 auto 44px;}
+  .contact{padding:56px 0;}
+  .contact .section-head{text-align:center; max-width:56ch; margin:0 auto 32px;}
   .contact .eyebrow{text-align:center;}
   .contact-info{
     display:flex; flex-direction:column;
@@ -414,7 +414,7 @@
 
   /* ---------- footer ---------- */
   footer{
-    padding:28px 0 40px;
+    padding:22px 0 32px;
     border-top:1px solid var(--border);
   }
   .footer-inner{
@@ -433,7 +433,6 @@
     .achievement-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
-    .nav-cta{display:none;}
     .nav-toggle{display:flex;}
   }
 
@@ -458,7 +457,6 @@
       <a href="#sustainwise">SustainWise</a>
       <a href="#about">About</a>
     </nav>
-    <a href="#contact" class="btn btn-gold nav-cta">Book a call</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
@@ -468,7 +466,6 @@
     <a href="#achievements">Selected work</a>
     <a href="#sustainwise">SustainWise</a>
     <a href="#about">About</a>
-    <a href="#contact" class="btn btn-gold">Book a call</a>
   </nav>
 </header>
 
@@ -481,8 +478,7 @@
       <h1>Strategic ESG, Sustainability and Reputational Risk Intelligence</h1>
       <p class="lede">I help companies, investors and financial institutions identify and manage material ESG, sustainability and reputational risks. From double materiality and controversy analysis to ESG methodologies and AI-enabled tools, I translate complex sustainability requirements into practical, decision-ready insight.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-gold">Request a scoping call</a>
-        <a href="#services" class="btn btn-ghost">How I support you</a>
+        <a href="#services" class="btn btn-gold">How I support you</a>
       </div>
     </div>
   </section>
@@ -590,6 +586,7 @@
 
   <section class="app-spotlight reveal" id="sustainwise">
     <div class="container app-spotlight-inner">
+      <img src="assets/sustainwise-icon.png" alt="SustainWise app icon" class="app-spotlight-icon">
       <span class="eyebrow">Own product</span>
       <h2>SustainWise — ESG regulation, five minutes a day</h2>
       <p>SustainWise is an app I designed and built myself — it teaches CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk through short daily quizzes, so teams build real ESG literacy without sitting through another training deck.</p>
