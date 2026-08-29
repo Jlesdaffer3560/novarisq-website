@@ -229,7 +229,19 @@
   .service-card:nth-child(odd) .service-icon{background:var(--accent-soft); color:var(--teal-deep);}
   .service-card:nth-child(even) .service-icon{background:var(--amber-soft); color:var(--amber-deep);}
   .service-card h3{font-size:1.1rem; margin-bottom:10px;}
-  .service-card p{color:var(--ink-soft); font-size:0.94rem; margin:0;}
+  .service-card p{color:var(--ink-soft); font-size:0.94rem; margin:0 0 12px;}
+  .service-card p:last-child{margin-bottom:0;}
+  .service-output{
+    padding-top:12px;
+    border-top:1px solid var(--border);
+    font-size:0.88rem !important;
+  }
+  .service-output .label{
+    display:block;
+    font-family:'Space Mono', monospace; font-size:0.65rem;
+    letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-deep);
+    margin-bottom:4px;
+  }
 
   /* ---------- typical questions ---------- */
   .questions{
@@ -492,21 +504,25 @@
           <span class="service-icon">1</span>
           <h3>ESG &amp; Sustainability Strategy Advice</h3>
           <p>A practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps.</p>
+          <p class="service-output"><span class="label">Output</span> ESG risk memo, management briefing or KPI review.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">2</span>
           <h3>Double Materiality Assessment</h3>
           <p>A defensible double materiality assessment covering both impact and financial materiality.</p>
+          <p class="service-output"><span class="label">Output</span> IRO review with scoring logic, evidence base and management conclusions.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">3</span>
           <h3>ESG Controversies Analysis</h3>
           <p>A concise, evidence-based risk note on ESG incidents affecting reputation or regulatory standing.</p>
+          <p class="service-output"><span class="label">Output</span> Company or sector controversy briefing with severity rating and next steps.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">4</span>
           <h3>ESG &amp; Sustainability AI Tools</h3>
           <p>AI-powered screening and decision-support tools built around your ESG data and workflows.</p>
+          <p class="service-output"><span class="label">Output</span> Prototype, methodology logic or red-flag screening workflow.</p>
         </article>
       </div>
     </div>
