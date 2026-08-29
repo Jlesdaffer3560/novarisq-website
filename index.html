@@ -410,9 +410,12 @@
     border-top:1px solid var(--border);
   }
   .footer-inner{
+    display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:6px 14px;
     text-align:center;
     font-size:0.85rem; color:var(--ink-soft);
   }
+  .footer-inner a{text-decoration:underline; text-underline-offset:2px;}
+  .footer-inner a:hover{color:var(--teal-deep);}
 
   @media (max-width:820px){
     .service-grid{grid-template-columns:1fr;}
@@ -633,6 +636,7 @@
 <footer>
   <div class="container footer-inner">
     <span>© 2026 NOVARISQ CONSULTING — VAT BE 1017.139.723</span>
+    <a href="privacy-policy.html">Privacy policy</a>
   </div>
 </footer>
 
