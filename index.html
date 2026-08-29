@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="assets/novarisq-icon.png">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
   :root{
     --bg:#f7f5ef;
@@ -35,7 +35,7 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; font-size:106.25%;}
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -46,7 +46,7 @@
     margin:0;
     background:var(--bg);
     color:var(--ink-soft);
-    font-family:'Work Sans', -apple-system, sans-serif;
+    font-family:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
@@ -67,10 +67,11 @@
   }
 
   h1,h2,h3{
-    font-family:'Archivo', 'Work Sans', sans-serif;
-    font-weight:700;
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    font-weight:600;
     margin:0 0 14px;
-    letter-spacing:-0.01em;
+    letter-spacing:-0.02em;
+    line-height:1.15;
     color:var(--ink);
   }
 
@@ -92,8 +93,9 @@
     gap:9px;
     padding:14px 30px;
     border-radius:999px;
-    font-family:'Work Sans', sans-serif;
-    font-weight:600;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:500;
+    letter-spacing:0.02em;
     font-size:0.95rem;
     text-decoration:none;
     border:1px solid transparent;
@@ -225,7 +227,7 @@
     display:inline-flex; align-items:center; justify-content:center;
     width:42px; height:42px;
     border-radius:12px;
-    font-family:'Archivo', sans-serif; font-weight:800; font-size:1.05rem;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:700; font-size:1.05rem;
     margin-bottom:16px;
   }
   .service-card:nth-child(odd) .service-icon{background:var(--accent-soft); color:var(--teal-deep);}
@@ -279,7 +281,7 @@
   .questions-list li:nth-child(odd)::before{background:var(--accent-soft); color:var(--teal-deep);}
   .questions-list li:nth-child(even)::before{background:var(--amber-soft); color:var(--amber-deep);}
   .questions-list li span{
-    font-family:'Archivo', sans-serif; font-weight:700; font-size:1.02rem;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:1.02rem;
     color:var(--teal-deep); line-height:1.4;
   }
 
@@ -323,7 +325,7 @@
   }
   .achievement-index{
     position:absolute; top:6px; right:16px;
-    font-family:'Archivo', sans-serif; font-weight:800;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:700;
     font-size:3.4rem; line-height:1;
     color:var(--accent-soft);
     z-index:0;
@@ -428,7 +430,7 @@
     letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55);
   }
   .contact-item a, .contact-item span.value{
-    font-family:'Work Sans', sans-serif;
+    font-family:'IBM Plex Sans', sans-serif;
     font-weight:400; font-size:1.05rem;
     text-decoration:none; color:#fff;
   }
