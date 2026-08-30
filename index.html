@@ -21,7 +21,7 @@
     --surface:#ffffff;
     --section-tint:#eef7f5;
     --accent-soft:#d6eee9;
-    --border:#e7e3d5;
+    --border:#ded7c4;
     --ink:#17262b;
     --ink-soft:#5e6a6f;
     --teal:#0f766e;
@@ -74,6 +74,7 @@
     line-height:1.15;
     color:var(--ink);
   }
+  h2{font-weight:700;}
 
   .eyebrow{
     font-family:'Space Mono', monospace;
@@ -102,7 +103,7 @@
     cursor:pointer;
     transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
   }
-  .btn-gold{background:var(--amber-deep); color:#fff;}
+  .btn-gold{background:var(--amber-deep); color:#fff; font-weight:600; box-shadow:0 4px 14px rgba(112,70,0,0.22);}
   .btn-gold:hover{background:#573600; transform:translateY(-2px); box-shadow:0 10px 26px rgba(112,70,0,0.32);}
 
   /* ---------- reveal on scroll ---------- */
@@ -221,7 +222,7 @@
   /* ---------- soft card (shared with About's "Flexible approach" box) ---------- */
   .soft-card{
     background:var(--accent-soft);
-    border-radius:16px;
+    border-radius:10px;
     padding:24px 26px;
   }
   .soft-card h3{font-size:1rem; margin-bottom:12px; color:var(--teal-deep);}
@@ -238,8 +239,9 @@
   .service-card{
     background:var(--surface);
     border:1px solid var(--border);
-    border-radius:14px;
+    border-radius:10px;
     padding:15px 17px;
+    box-shadow:0 1px 3px rgba(11,90,84,0.04);
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .service-card:hover{
@@ -281,8 +283,9 @@
   .audience-group{
     background:var(--bg);
     border:1px solid var(--border);
-    border-radius:12px;
+    border-radius:9px;
     padding:15px 17px;
+    box-shadow:0 1px 3px rgba(11,90,84,0.04);
   }
   .audience-group h3{font-size:0.98rem; font-weight:500; margin-bottom:5px; color:var(--ink);}
   .audience-group p{font-size:0.86rem; color:var(--ink-soft); margin:0;}
@@ -299,8 +302,9 @@
     overflow:hidden;
     background:var(--bg);
     border:1px solid var(--border);
-    border-radius:14px;
+    border-radius:10px;
     padding:16px 17px 15px;
+    box-shadow:0 1px 3px rgba(11,90,84,0.04);
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .achievement-card:hover{
