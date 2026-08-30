@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="assets/novarisq-icon.png">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=block');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&display=swap');
 
   :root{
     --bg:#f7f5ef;
@@ -83,11 +83,6 @@
     color:var(--teal-deep);
     margin:0 0 16px;
     display:block;
-  }
-
-  .material-symbols-outlined{
-    font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
-    line-height:1;
   }
 
   p{margin:0 0 16px;}
@@ -251,21 +246,6 @@
     transform:translateY(-4px);
     box-shadow:0 12px 28px rgba(11,90,84,0.1);
   }
-  .service-icon{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:42px; height:42px;
-    border-radius:12px;
-    margin-bottom:16px;
-    overflow:hidden;
-  }
-  .service-icon .material-symbols-outlined{font-size:22px;}
-  .service-icon img{width:100%; height:100%; object-fit:contain; padding:7px;}
-  .service-card:nth-child(odd) .service-icon,
-  .audience-group:nth-child(odd) .service-icon,
-  .achievement-card:nth-child(odd) .service-icon{background:var(--accent-soft); color:var(--teal-deep);}
-  .service-card:nth-child(even) .service-icon,
-  .audience-group:nth-child(even) .service-icon,
-  .achievement-card:nth-child(even) .service-icon{background:var(--amber-soft); color:var(--amber-deep);}
   .service-card h3{font-size:1.1rem; font-weight:500; margin-bottom:10px;}
   .service-card p{color:var(--ink-soft); font-size:0.94rem; margin:0 0 12px;}
   .service-card p:last-child{margin-bottom:0;}
@@ -513,28 +493,24 @@
       </div>
       <div class="service-grid">
         <article class="service-card">
-          <span class="service-icon"><span class="material-symbols-outlined">fact_check</span></span>
           <p class="service-question">"How should we structure a practical CSRD/ESRS readiness approach?"</p>
           <h3>ESG &amp; Sustainability Strategy Advice</h3>
           <p>A practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps.</p>
           <p class="service-output"><span class="label">Output</span> ESG risk memo, management briefing or KPI review.</p>
         </article>
         <article class="service-card">
-          <span class="service-icon"><span class="material-symbols-outlined">balance</span></span>
           <p class="service-question">"Are our ESG KPIs material and credible?"</p>
           <h3>Double Materiality Assessment</h3>
           <p>A defensible double materiality assessment covering both impact and financial materiality.</p>
           <p class="service-output"><span class="label">Output</span> IRO review with scoring logic, evidence base and management conclusions.</p>
         </article>
         <article class="service-card">
-          <span class="service-icon"><span class="material-symbols-outlined">warning</span></span>
           <p class="service-question">"Which ESG risks could affect this company's reputation?"</p>
           <h3>ESG Controversies Analysis</h3>
           <p>A concise, evidence-based risk note on ESG incidents affecting reputation or regulatory standing.</p>
           <p class="service-output"><span class="label">Output</span> Company or sector controversy briefing with severity rating and next steps.</p>
         </article>
         <article class="service-card">
-          <span class="service-icon"><span class="material-symbols-outlined">smart_toy</span></span>
           <p class="service-question">"Can AI reduce manual ESG screening work without losing professional judgement?"</p>
           <h3>ESG &amp; Sustainability AI Tools</h3>
           <p>AI-powered screening and decision-support tools built around your ESG data and workflows.</p>
@@ -552,17 +528,14 @@
       </div>
       <div class="audience-groups">
         <div class="audience-group">
-          <span class="service-icon"><span class="material-symbols-outlined">account_balance</span></span>
           <h3>Investors &amp; financial institutions</h3>
           <p>Asset managers, banks and insurers assessing ESG and reputational risk across portfolios and counterparties.</p>
         </div>
         <div class="audience-group">
-          <span class="service-icon"><span class="material-symbols-outlined">groups</span></span>
           <h3>Companies &amp; sustainability teams</h3>
           <p>Corporates, sustainability teams, risk departments, boards and NGOs.</p>
         </div>
         <div class="audience-group">
-          <span class="service-icon"><span class="material-symbols-outlined">database</span></span>
           <h3>ESG data &amp; tool providers</h3>
           <p>Screening and rating providers refining methodologies, controversy criteria and AI-assisted workflows.</p>
         </div>
@@ -578,25 +551,21 @@
       </div>
       <div class="achievement-grid">
         <article class="achievement-card">
-          <span class="service-icon"><span class="material-symbols-outlined">database</span></span>
           <span class="achievement-tag">Product management</span>
           <h3>Sentometrics — UNGC Risk Incident Database</h3>
           <p>Product management of Sentometrics' UNGC Risk Incident Database, an ESG controversy and due-diligence screening tool.</p>
         </article>
         <article class="achievement-card">
-          <span class="service-icon"><span class="material-symbols-outlined">document_scanner</span></span>
           <span class="achievement-tag">Development</span>
           <h3>Durably — Sustainability Scan</h3>
           <p>Development of Durably's AI-enabled Sustainability Scan, screening greenwashing and social-washing risk in marketing claims.</p>
         </article>
         <article class="achievement-card">
-          <span class="service-icon"><span class="material-symbols-outlined">support_agent</span></span>
           <span class="achievement-tag">Advisory</span>
           <h3>PMV — ESG Advisory Support</h3>
           <p>ESG advisory support to PMV on KPI relevance, ESG tool outputs, client cases and practical implementation.</p>
         </article>
         <article class="achievement-card">
-          <span class="service-icon"><img src="assets/sustainwise-icon.png" alt=""></span>
           <span class="achievement-tag">Founder &amp; Developer</span>
           <h3>SustainWise</h3>
           <p>An app that teaches ESG regulation — CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk — through short daily quizzes.</p>
