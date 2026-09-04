@@ -236,12 +236,18 @@
     display:grid; grid-template-columns:repeat(2,1fr); gap:26px 32px;
   }
   .service-card{
-    border-top:2px solid var(--amber-deep);
-    padding:16px 0 0;
-    transition:border-color .18s ease;
+    position:relative;
+    padding:18px 0 0;
   }
-  .service-card:hover{
-    border-top-color:var(--teal-deep);
+  .service-card::before{
+    content:"";
+    position:absolute; top:0; left:0;
+    width:32px; height:2px;
+    background:var(--amber-deep); opacity:0.6;
+    transition:opacity .18s ease;
+  }
+  .service-card:hover::before{
+    opacity:1;
   }
   .service-card h3{font-size:1rem; font-weight:600; margin-bottom:8px;}
   .service-card p{color:var(--ink-soft); font-size:0.88rem; margin:0 0 9px;}
@@ -273,8 +279,14 @@
     text-align:left;
   }
   .audience-group{
-    border-top:2px solid var(--amber-deep);
-    padding:16px 0 0;
+    position:relative;
+    padding:18px 0 0;
+  }
+  .audience-group::before{
+    content:"";
+    position:absolute; top:0; left:0;
+    width:32px; height:2px;
+    background:var(--amber-deep); opacity:0.6;
   }
   .audience-group h3{font-size:0.98rem; font-weight:600; margin-bottom:5px; color:var(--teal-deep);}
   .audience-group p{font-size:0.86rem; color:var(--ink-soft); margin:0;}
@@ -288,12 +300,18 @@
     display:grid; grid-template-columns:repeat(2,1fr); gap:26px 32px;
   }
   .achievement-card{
-    border-top:2px solid var(--amber-deep);
-    padding:16px 0 0;
-    transition:border-color .18s ease;
+    position:relative;
+    padding:18px 0 0;
   }
-  .achievement-card:hover{
-    border-top-color:var(--teal-deep);
+  .achievement-card::before{
+    content:"";
+    position:absolute; top:0; left:0;
+    width:32px; height:2px;
+    background:var(--amber-deep); opacity:0.6;
+    transition:opacity .18s ease;
+  }
+  .achievement-card:hover::before{
+    opacity:1;
   }
   .achievement-tag{
     display:block;
