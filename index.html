@@ -13,9 +13,10 @@
 <meta property="og:image" content="https://novarisq.com/assets/novarisq-icon.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="assets/novarisq-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&display=swap');
-
   :root{
     --bg:#fbfbfc;
     --surface:#ffffff;
@@ -59,6 +60,19 @@
     outline-offset:3px;
     border-radius:4px;
   }
+  .hero :focus-visible, .contact :focus-visible{
+    outline-color:#fff;
+  }
+
+  .skip-link{
+    position:absolute; left:12px; top:-48px;
+    background:var(--deep); color:#fff;
+    padding:10px 18px; border-radius:8px;
+    font-weight:600; font-size:0.9rem; text-decoration:none;
+    z-index:100;
+    transition:top .15s ease;
+  }
+  .skip-link:focus{top:12px;}
 
   .container{
     max-width:1080px;
@@ -168,13 +182,18 @@
     padding:8px 28px 20px;
     border-top:1px solid var(--border);
   }
-  .mobile-nav.open{display:flex;}
   .mobile-nav a{
     padding:12px 0;
     text-decoration:none; color:var(--ink); font-weight:600;
     border-bottom:1px solid var(--border);
   }
   .mobile-nav a:last-child{border-bottom:none;}
+  /* v2: .open only opens the panel below the 820px breakpoint -- unscoped, it also
+     matched on desktop widths whenever the panel had been opened before resizing up,
+     showing the mobile panel stacked underneath the (separately-visible) desktop nav. */
+  @media (max-width:820px){
+    .mobile-nav.open{display:flex;}
+  }
 
   @media (max-width:600px){
     .utility-strip{display:none;}
@@ -449,10 +468,21 @@
     .about-photo-wrap{width:180px;}
     .about-photo{width:180px; height:180px;}
   }
+
+  @media print{
+    .reveal{opacity:1 !important; transform:none !important;}
+    .utility-strip, .nav-toggle, .mobile-nav, .section-watermark, .skip-link{display:none !important;}
+    header.site-nav{position:static;}
+    .hero, .contact{background:#fff !important; color:var(--ink) !important;}
+    .hero h1, .contact h2{color:var(--teal-deep) !important;}
+    .hero .lede, .hero .eyebrow, .contact .eyebrow, .contact-item a, .contact-item .label{color:var(--ink-soft) !important;}
+    .btn-gold{display:none;}
+  }
 </style>
 </head>
 <body>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
+<a href="#top" class="skip-link">Skip to content</a>
 
 <div class="utility-strip">
   <span>Brussels · Independent ESG Consultant</span>
@@ -461,13 +491,14 @@
 <header class="site-nav">
   <div class="nav-row">
     <a href="#top" class="logo">
-      <img src="assets/novarisq-logo-compact.png" alt="NOVARISQ Consulting" class="logo-image">
+      <img src="assets/novarisq-logo-compact.png" alt="NOVARISQ Consulting" class="logo-image" width="2557" height="497">
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#achievements">Selected work</a>
       <a href="#sustainwise">SustainWise</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
@@ -479,10 +510,11 @@
     <a href="#achievements">Selected work</a>
     <a href="#sustainwise">SustainWise</a>
     <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
   <section class="hero">
     <svg class="section-watermark on-dark" viewBox="0 0 800 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
@@ -637,7 +669,7 @@
 
   <section class="app-spotlight reveal" id="sustainwise">
     <div class="container app-spotlight-inner">
-      <img src="assets/sustainwise-icon.png" alt="SustainWise app icon" class="app-spotlight-icon">
+      <img src="assets/sustainwise-icon.png" alt="SustainWise app icon" class="app-spotlight-icon" width="192" height="192" loading="lazy" decoding="async">
       <span class="eyebrow">Own product</span>
       <h2>SustainWise — ESG regulation, fifteen minutes a day</h2>
       <p>SustainWise is an app I designed and built myself — it teaches CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk through short daily quizzes, so teams build real ESG literacy without sitting through another training deck.</p>
@@ -649,7 +681,7 @@
     <div class="container about-grid">
       <div>
         <div class="about-photo-wrap">
-          <img src="assets/jordi-lesaffer.jpg" alt="Jordi Lesaffer" class="about-photo">
+          <img src="assets/jordi-lesaffer.jpg" alt="Jordi Lesaffer" class="about-photo" width="660" height="990" loading="lazy" decoding="async">
         </div>
         <span class="about-name">About me — Jordi Lesaffer</span>
         <h2>Senior Sustainability Risk Advisor</h2>
@@ -661,7 +693,7 @@
         <h3>Flexible approach</h3>
         <p>Based in Dilbeek, near Brussels, I provide flexible support for short-term assignments, targeted ESG analyses and larger advisory projects.</p>
         <p>While I primarily work remotely, I am available to work on-site when required to ensure optimal collaboration and results.</p>
-        <p>My goal is to provide solutions that align perfectly with your business objectives, delivering value in a way that works best for you.</p>
+        <p>My goal is to provide solutions that align with your business objectives, delivering value in a way that works best for you.</p>
       </div>
     </div>
   </section>
@@ -688,7 +720,7 @@
         </div>
         <div class="contact-item">
           <span class="label">LinkedIn</span>
-          <a href="https://linkedin.com/in/jordi-lesaffer-708367a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jordi-lesaffer</a>
+          <a href="https://linkedin.com/in/jordi-lesaffer-708367a/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         </div>
       </div>
     </div>
@@ -707,14 +739,27 @@
   const navToggle = document.getElementById('navToggle');
   const mobileNav = document.getElementById('mobileNav');
   if (navToggle && mobileNav) {
+    const closeMobileNav = () => {
+      mobileNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
     navToggle.addEventListener('click', () => {
       const isOpen = mobileNav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', isOpen);
     });
-    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        closeMobileNav();
+        navToggle.focus();
+      }
+    });
+    // Resizing past the mobile breakpoint with the panel left open would otherwise
+    // leave .open set (nothing else clears it), which the CSS media-query fix alone
+    // can't undo once the viewport crosses back below 820px again.
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMobileNav();
+    });
   }
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
