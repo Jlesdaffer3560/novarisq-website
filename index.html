@@ -423,17 +423,6 @@
     color:#f0c090; background:rgba(255,255,255,0.1); border:none;
   }
   .contact h2{color:#fff;}
-  .cta-row{
-    display:flex; align-items:center; justify-content:center;
-    gap:14px; flex-wrap:wrap;
-  }
-  .btn-copy-email{
-    background:none; border:1px solid rgba(255,255,255,0.35); color:#fff;
-    padding:13px 22px; border-radius:999px;
-    font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.9rem;
-    cursor:pointer; transition:border-color .18s ease, color .18s ease;
-  }
-  .btn-copy-email:hover{border-color:#f0c090; color:#f0c090;}
   .cta-hint{
     font-size:0.78rem; color:rgba(255,255,255,0.5);
     margin:10px 0 0; text-align:center;
@@ -724,10 +713,7 @@
       <div class="section-head">
         <span class="eyebrow">Get in touch</span>
         <h2>Let's talk about your ESG and sustainability risk needs</h2>
-        <div class="cta-row">
-          <a href="mailto:jordi.lesaffer@novarisq.com?subject=Introductory%20call%20request" class="btn btn-gold">Request an introductory call</a>
-          <button type="button" class="btn-copy-email" id="copyEmailBtn" data-email="jordi.lesaffer@novarisq.com" data-default="Copy email address" data-copied="Copied!">Copy email address</button>
-        </div>
+        <a href="mailto:jordi.lesaffer@novarisq.com?subject=Introductory%20call%20request" class="btn btn-gold">Request an introductory call</a>
         <p class="cta-hint">Opens your email application.</p>
       </div>
       <div class="contact-info contact-info-solo">
@@ -780,30 +766,6 @@
     // can't undo once the viewport crosses back below 820px again.
     window.addEventListener('resize', () => {
       if (window.innerWidth > 820) closeMobileNav();
-    });
-  }
-
-  const copyEmailBtn = document.getElementById('copyEmailBtn');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', async () => {
-      const email = copyEmailBtn.dataset.email;
-      try {
-        await navigator.clipboard.writeText(email);
-      } catch (err) {
-        const temp = document.createElement('textarea');
-        temp.value = email;
-        temp.style.position = 'fixed';
-        temp.style.opacity = '0';
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand('copy');
-        document.body.removeChild(temp);
-      }
-      copyEmailBtn.textContent = copyEmailBtn.dataset.copied;
-      clearTimeout(copyEmailBtn._resetTimer);
-      copyEmailBtn._resetTimer = setTimeout(() => {
-        copyEmailBtn.textContent = copyEmailBtn.dataset.default;
-      }, 2000);
     });
   }
 
