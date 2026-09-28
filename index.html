@@ -122,6 +122,9 @@
   }
   .btn-gold{background:var(--amber-deep); color:#fff; font-weight:600; box-shadow:0 4px 14px rgba(112,70,0,0.22);}
   .btn-gold:hover{background:#573600; transform:translateY(-2px); box-shadow:0 10px 26px rgba(112,70,0,0.32);}
+  .btn-ghost{background:transparent; border-color:rgba(255,255,255,0.45); color:#fff;}
+  .btn-ghost:hover{border-color:#fff; background:rgba(255,255,255,0.1);}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
 
   /* ---------- reveal on scroll ---------- */
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
@@ -680,7 +683,10 @@
       <span class="eyebrow">Own product</span>
       <h2>SustainWise — ESG regulation, fifteen minutes a day</h2>
       <p>SustainWise is an app I designed and built myself — it teaches CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk through short daily quizzes, so teams build real ESG literacy without sitting through another training deck.</p>
-      <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Visit SustainWise →</a>
+      <div class="cta-row">
+        <a href="https://sustainwiseapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Visit SustainWise →</a>
+        <a href="https://play.google.com/store/apps/details?id=com.regulingo.app" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Download free on Google Play</a>
+      </div>
     </div>
   </section>
 
