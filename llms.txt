@@ -4,16 +4,36 @@
 
 Key facts:
 - Trading name: NOVARISQ Consulting. VAT BE 1017.139.723. Registered address: Bunderdreef 7, 1700 Dilbeek, Belgium.
-- Principal: Jordi Lesaffer, Senior Sustainability Risk Advisor. Executive Master in Management (Solvay Brussels School of Economics & Management), CSRD Professional certified, board member at Forum Ethibel.
+- Principal: Jordi Lesaffer, Senior Sustainability Risk Advisor. 20+ years in ESG research, sustainable finance and controversy risk assessment, including close to two decades at Vigeo Eiris and Moody's (most recently Product Manager, Moody's ESG Incidents Screening). Executive Master in Management (Solvay Brussels School of Economics & Management), CSRD Professional certified, board member at Forum Ethibel.
 - Works primarily remotely; available on-site when it best serves the engagement.
 - Flexible engagement formats: short, targeted assignments or longer advisory projects, full-time or part-time, and available on demand for a call or a specific question.
 - Contact: jordi.lesaffer@novarisq.com
 
 ## Services
-- [ESG & Sustainability Strategy Advice](https://novarisq.com/#services): practical ESG and sustainability strategy aligned with CSRD and CSDDD. Output: ESG risk memo, management briefing or KPI review.
-- [Double Materiality Assessment](https://novarisq.com/#services): defensible assessment covering impact and financial materiality. Output: IRO review with scoring logic, evidence base and management conclusions.
-- [ESG Controversies Analysis](https://novarisq.com/#services): evidence-based risk note on ESG incidents affecting reputation or regulatory standing. Output: company or sector controversy briefing with severity rating and next steps.
-- [ESG & Sustainability AI Tools](https://novarisq.com/#services): AI-powered screening and decision-support tools built around a client's ESG data and workflows. Output: prototype, methodology logic or red-flag screening workflow.
+### Regulation & reporting readiness
+- [ESG & Sustainability Strategy Advice](https://novarisq.com/#services): a practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps. Output: ESG risk memo, management briefing or KPI review.
+- [Double Materiality Assessment](https://novarisq.com/#services): a defensible double materiality assessment covering both impact and financial materiality. Output: IRO review with scoring logic, evidence base and management conclusions.
+- [CSRD/ESRS Readiness & Gap Analysis](https://novarisq.com/#services): a structured gap analysis against CSRD and ESRS requirements, with a prioritised roadmap to reporting readiness. Output: gap analysis, readiness roadmap and ownership overview.
+- [Audit-Traceable ESG Documentation](https://novarisq.com/#services): an evidence base that holds up to review: sources, assumptions and scoring decisions documented so every conclusion can be traced and defended. Output: documentation framework, source register and review-ready evidence files.
+- [ESG KPI & Metrics Framework](https://novarisq.com/#services): assessment and design of ESG KPIs for relevance, credibility and decision-usefulness, aligned with your material topics and reporting needs. Output: KPI review with recommendations and a KPI framework.
+- [Human-Rights Due Diligence & CSDDD Readiness](https://novarisq.com/#services): practical due-diligence processes, from risk identification across the value chain to prioritisation and follow-up, aligned with CSDDD and UNGC/OECD expectations. Output: process map, risk prioritisation and action plan.
+### Sustainable finance & responsible investment
+- [Sustainable Finance Advisory (SFDR & EU Taxonomy)](https://novarisq.com/#services): support on sustainable-finance regulation and product classification, from SFDR disclosures to EU Taxonomy alignment questions. Output: interpretation memo, disclosure review or classification rationale.
+- [Responsible-Investment Screening & Exclusion Policy](https://novarisq.com/#services): design and review of ESG and controversy-based screening, norms-based exclusion criteria and responsible-investment policies. Output: screening framework, criteria set and policy recommendations.
+- [ESG Due Diligence](https://novarisq.com/#services): ESG and reputational due diligence on companies, investments, suppliers and counterparties, based on structured evidence and severity assessment. Output: due-diligence report with red flags, severity rating and recommended next steps.
+- [ESG Ratings & Methodology Review](https://novarisq.com/#services): design, review and calibration of ESG rating and scoring methodologies, including criteria, weighting and quality-control rules. Output: methodology assessment, gap list and improvement proposals.
+### Risk, controversies & claims
+- [ESG Controversies Analysis](https://novarisq.com/#services): a concise, evidence-based risk note on ESG incidents affecting reputation or regulatory standing. Output: company or sector controversy briefing with severity rating and next steps.
+- [UNGC & OECD Screening](https://novarisq.com/#services): norms-based screening of companies against UN Global Compact principles and OECD guidelines, including adverse-impact and severity assessment. Output: screening report with an assessment per principle, severity rating and sources.
+- [Greenwashing & Social-Washing Claims Review](https://novarisq.com/#services): review of sustainability and social claims in websites, reports and marketing for substantiation gaps and regulatory risk, for example under the EU EmpCo Directive. A risk review, not legal advice. Output: claim-by-claim risk assessment with substantiation gaps and wording recommendations.
+- [Business Conduct & Governance Risk Review](https://novarisq.com/#services): assessment of governance, anti-corruption, ethics and business-conduct risks, from policies to practice. Output: risk review with findings, evidence and priority actions.
+- [Supply-Chain & Forced-Labour Risk Screening](https://novarisq.com/#services): screening of supply chains and suppliers for human-rights, labour-standard and forced-labour risks, including the EU Forced Labour Regulation. Output: risk screening with hotspots, severity rating and mitigation priorities.
+- [Controversy Monitoring Set-up](https://novarisq.com/#services): design of a monitoring process for ESG incidents: sources, triggers, severity scale and escalation, for portfolios, suppliers or your own company. Output: monitoring framework, severity scale and reporting template.
+### Data, product, AI & capability
+- [ESG & Sustainability AI Tools](https://novarisq.com/#services): AI-powered screening and decision-support tools built around your ESG data and workflows. Output: prototype, methodology logic or red-flag screening workflow.
+- [ESG Data Product Management](https://novarisq.com/#services): translating ESG methodologies into data products: taxonomies, specifications, analyst workflows and client-facing outputs. Output: product specification, taxonomy and delivery roadmap.
+- [Analyst Workflow & Quality Control](https://novarisq.com/#services): setting up or improving ESG research workflows: quality-control rules, consistency checks, source traceability and team coaching. Output: workflow design, QC checklist and coaching plan.
+- [Training & Workshops](https://novarisq.com/#services): tailored sessions for teams on CSRD/ESRS, double materiality, greenwashing, due diligence and ESG data. Output: workshop or training session with materials tailored to your organisation.
 
 ## Who NOVARISQ works with
 - [Audience](https://novarisq.com/#audience): investors and financial institutions; companies and sustainability teams (corporates, risk departments, boards, NGOs); ESG data and tool providers.
