@@ -1,0 +1,35 @@
+# NOVARISQ Consulting
+
+> Independent ESG, sustainability and reputational risk consultancy run by Jordi Lesaffer, based in Dilbeek near Brussels, Belgium. NOVARISQ helps companies, investors and financial institutions identify material ESG and reputational risks and translate them into clear, decision-ready advice.
+
+Key facts:
+- Trading name: NOVARISQ Consulting. VAT BE 1017.139.723. Registered address: Bunderdreef 7, 1700 Dilbeek, Belgium.
+- Principal: Jordi Lesaffer, Senior Sustainability Risk Advisor. Executive Master in Management (Solvay Brussels School of Economics & Management), CSRD Professional certified, board member at Forum Ethibel.
+- Works primarily remotely; available on-site when it best serves the engagement.
+- Contact: jordi.lesaffer@novarisq.com
+
+## Services
+- [ESG & Sustainability Strategy Advice](https://novarisq.com/#services): practical ESG and sustainability strategy aligned with CSRD and CSDDD. Output: ESG risk memo, management briefing or KPI review.
+- [Double Materiality Assessment](https://novarisq.com/#services): defensible assessment covering impact and financial materiality. Output: IRO review with scoring logic, evidence base and management conclusions.
+- [ESG Controversies Analysis](https://novarisq.com/#services): evidence-based risk note on ESG incidents affecting reputation or regulatory standing. Output: company or sector controversy briefing with severity rating and next steps.
+- [ESG & Sustainability AI Tools](https://novarisq.com/#services): AI-powered screening and decision-support tools built around a client's ESG data and workflows. Output: prototype, methodology logic or red-flag screening workflow.
+
+## Who NOVARISQ works with
+- [Audience](https://novarisq.com/#audience): investors and financial institutions; companies and sustainability teams (corporates, risk departments, boards, NGOs); ESG data and tool providers.
+
+## Selected work
+- [Sentometrics - UNGC Risk Incident Database](https://sentometrics.com/): product management of an ESG controversy and due-diligence screening tool.
+- [Durably - Sustainability Scan](https://www.durably.eu/): development of an AI-enabled scan that screens greenwashing and social-washing risk in marketing claims.
+- [PMV - ESG Advisory Support](https://www.pmv.eu/): ESG advisory support on KPI relevance, ESG tool outputs, client cases and practical implementation.
+- [SustainWise](https://sustainwiseapp.com): ESG-learning app built by NOVARISQ, with short daily quizzes on CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk. Available on [Google Play](https://play.google.com/store/apps/details?id=com.regulingo.app).
+
+## About and reference
+- [About Jordi Lesaffer](https://novarisq.com/#about): profile and background.
+- [Company facts](https://novarisq.com/company-facts.html): single reference page with identity, services, audience and site overview.
+- [FAQ](https://novarisq.com/#faq): answers to common questions about services and ways of working.
+- [CV (PDF)](https://novarisq.com/assets/jordi-lesaffer-cv.pdf): full curriculum vitae.
+
+## Optional
+- [Privacy policy](https://novarisq.com/privacy-policy.html)
+- [Sitemap](https://novarisq.com/sitemap.xml)
+- [LinkedIn - Jordi Lesaffer](https://linkedin.com/in/jordi-lesaffer-708367a/)
