@@ -7,6 +7,7 @@
 <meta name="description" content="Independent ESG consultancy in Brussels: CSRD readiness, double materiality, sustainable finance, due diligence, greenwashing and controversy analysis.">
 <link rel="canonical" href="https://novarisq.com/">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.remove('js');},3000);</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://novarisq.com/">
 <meta property="og:title" content="NOVARISQ Consulting — Strategic ESG, Sustainability and Reputational Risk Intelligence">
@@ -550,8 +551,10 @@
   .cta-row{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
 
   /* ---------- reveal on scroll ---------- */
-  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  /* Content is visible by default; it is only pre-hidden for the scroll-reveal animation
+     when scripting is confirmed to be running (see the inline script in <head>). */
+  .js .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .js .reveal.is-visible{opacity:1; transform:translateY(0);}
 
   section[id]{scroll-margin-top:110px;}
 
@@ -1432,6 +1435,7 @@
     document.querySelectorAll('details.faq-item').forEach((d) => { d.open = true; });
   });
 
+  window.__revealReady = true;
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
   if (prefersReduced || !('IntersectionObserver' in window)) {
@@ -1444,7 +1448,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(el => io.observe(el));
   }
 </script>
