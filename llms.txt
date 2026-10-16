@@ -30,7 +30,7 @@ Key facts:
 - [Controversy Monitoring Set-up](https://novarisq.com/#services): design of a monitoring process for ESG incidents: sources, triggers, severity scale and escalation, for portfolios, suppliers or your own company. Output: monitoring framework, severity scale and reporting template.
 ### Data, product & AI
 - [ESG & Sustainability AI Tools](https://novarisq.com/#services): AI-powered screening and decision-support tools built around your ESG data and workflows. Output: prototype, methodology logic or red-flag screening workflow.
-- [ESG Data Product Management](https://novarisq.com/#services): translating ESG methodologies into data products: taxonomies, specifications, analyst workflows and client-facing outputs. Output: product specification, taxonomy and delivery roadmap.
+- [ESG Data Product Management](https://novarisq.com/#services): translating ESG methodologies into data products: taxonomies, specifications and client-facing outputs. Output: product specification, taxonomy and delivery roadmap.
 
 ## Who NOVARISQ works with
 - [Audience](https://novarisq.com/#audience): investors and financial institutions; companies and sustainability teams (corporates, risk departments, boards, NGOs); ESG data and tool providers.
