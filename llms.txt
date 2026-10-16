@@ -37,7 +37,7 @@ Key facts:
 
 ## Selected work
 - [Sentometrics - UNGC Risk Incident Database](https://sentometrics.com/): product management of an ESG controversy and due-diligence screening tool.
-- [Durably - Sustainability Scan](https://www.durably.eu/): development of an AI-enabled scan that screens greenwashing and social-washing risk in marketing claims.
+- [Durably - Green & Social Claims Scan](https://www.durably.eu/): development of an AI-enabled scan that screens greenwashing and social-washing risk in marketing claims.
 - [PMV - ESG Advisory Support](https://www.pmv.eu/): ESG advisory support on KPI relevance, ESG tool outputs, client cases and practical implementation.
 - [SustainWise](https://sustainwiseapp.com): ESG-learning app built by NOVARISQ, with short daily quizzes on CSRD, SFDR, greenwashing rules and forced-labour supply-chain risk. Available on [Google Play](https://play.google.com/store/apps/details?id=com.regulingo.app).
 
