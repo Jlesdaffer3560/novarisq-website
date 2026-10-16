@@ -13,8 +13,7 @@ Key facts:
 ### Regulation & reporting readiness
 - [ESG & Sustainability Strategy Advice](https://novarisq.com/#services): a practical ESG and sustainability strategy aligned with CSRD and CSDDD, with clear priorities and next steps. Output: ESG risk memo, management briefing or KPI review.
 - [Double Materiality Assessment](https://novarisq.com/#services): a defensible double materiality assessment covering both impact and financial materiality. Output: IRO review with scoring logic, evidence base and management conclusions.
-- [CSRD/ESRS Readiness & Gap Analysis](https://novarisq.com/#services): a structured gap analysis against CSRD and ESRS requirements, with a prioritised roadmap to reporting readiness. Output: gap analysis, readiness roadmap and ownership overview.
-- [Audit-Traceable ESG Documentation](https://novarisq.com/#services): an evidence base that holds up to review: sources, assumptions and scoring decisions documented so every conclusion can be traced and defended. Output: documentation framework, source register and review-ready evidence files.
+- [CSRD/ESRS Reporting Preparation Support](https://novarisq.com/#services): support in preparing your CSRD sustainability report: clarifying what ESRS expects of you, scoping the topics and data points that matter, and structuring the process towards reporting. Output: preparation roadmap, requirements overview and input for the report structure.
 - [ESG KPI & Metrics Framework](https://novarisq.com/#services): assessment and design of ESG KPIs for relevance, credibility and decision-usefulness, aligned with your material topics and reporting needs. Output: KPI review with recommendations and a KPI framework.
 - [Human-Rights Due Diligence & CSDDD Readiness](https://novarisq.com/#services): practical due-diligence processes, from risk identification across the value chain to prioritisation and follow-up, aligned with CSDDD and UNGC/OECD expectations. Output: process map, risk prioritisation and action plan.
 ### Sustainable finance & responsible investment
@@ -29,11 +28,9 @@ Key facts:
 - [Business Conduct & Governance Risk Review](https://novarisq.com/#services): assessment of governance, anti-corruption, ethics and business-conduct risks, from policies to practice. Output: risk review with findings, evidence and priority actions.
 - [Supply-Chain & Forced-Labour Risk Screening](https://novarisq.com/#services): screening of supply chains and suppliers for human-rights, labour-standard and forced-labour risks, including the EU Forced Labour Regulation. Output: risk screening with hotspots, severity rating and mitigation priorities.
 - [Controversy Monitoring Set-up](https://novarisq.com/#services): design of a monitoring process for ESG incidents: sources, triggers, severity scale and escalation, for portfolios, suppliers or your own company. Output: monitoring framework, severity scale and reporting template.
-### Data, product, AI & capability
+### Data, product & AI
 - [ESG & Sustainability AI Tools](https://novarisq.com/#services): AI-powered screening and decision-support tools built around your ESG data and workflows. Output: prototype, methodology logic or red-flag screening workflow.
 - [ESG Data Product Management](https://novarisq.com/#services): translating ESG methodologies into data products: taxonomies, specifications, analyst workflows and client-facing outputs. Output: product specification, taxonomy and delivery roadmap.
-- [Analyst Workflow & Quality Control](https://novarisq.com/#services): setting up or improving ESG research workflows: quality-control rules, consistency checks, source traceability and team coaching. Output: workflow design, QC checklist and coaching plan.
-- [Training & Workshops](https://novarisq.com/#services): tailored sessions for teams on CSRD/ESRS, double materiality, greenwashing, due diligence and ESG data. Output: workshop or training session with materials tailored to your organisation.
 
 ## Who NOVARISQ works with
 - [Audience](https://novarisq.com/#audience): investors and financial institutions; companies and sustainability teams (corporates, risk departments, boards, NGOs); ESG data and tool providers.
